@@ -38,7 +38,7 @@ const Portfolio = () => {
     <div className="min-h-screen bg-gray-100 py-10 px-4">
       <div className="max-w-6xl mx-auto">
 
-        {/* Header */}
+       
         <div className="text-center mb-10">
           <h1 className="text-4xl font-bold text-blue-600">
             My Portfolio
@@ -48,7 +48,7 @@ const Portfolio = () => {
           </p>
         </div>
 
-        {/* Projects */}
+   
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {projects.map((project) => (
             <div
@@ -101,7 +101,7 @@ const Portfolio = () => {
           ))}
         </div>
 
-        {/* Empty State */}
+      
         {projects.length === 0 && (
           <div className="text-center mt-16">
             <h2 className="text-2xl font-semibold text-gray-600">

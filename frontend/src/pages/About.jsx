@@ -14,7 +14,7 @@ const About = () => {
     ">
 
 
-      {/* Hero Section */}
+
 
       <div className="
         max-w-6xl
@@ -57,8 +57,7 @@ const About = () => {
 
 
 
-      {/* Mission Cards */}
-
+     
       <div className="
         max-w-6xl
         mx-auto
@@ -192,7 +191,7 @@ const About = () => {
 
 
 
-      {/* Features Section */}
+     
 
       <div className="
         max-w-6xl
@@ -263,7 +262,7 @@ const About = () => {
 
 
 
-      {/* CTA Section */}
+   
 
 
       <div className="

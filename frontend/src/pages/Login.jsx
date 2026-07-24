@@ -85,13 +85,13 @@ const Login = () => {
   return (
   <div className="min-h-screen flex items-center justify-center bg-gradient-to-br from-black via-gray-800 to-white relative overflow-hidden">
 
-    {/* Background Effects */}
+  
 
     <div className="absolute top-10 left-10 w-96 h-96 bg-gray-500/20 rounded-full blur-3xl"></div>
 
     <div className="absolute bottom-10 right-10 w-96 h-96 bg-white/20 rounded-full blur-3xl"></div>
 
-    {/* Login Card */}
+   
 
     <div className="relative z-10 w-full max-w-md bg-white/10 backdrop-blur-xl border border-white/20 shadow-2xl p-10">
 
@@ -105,7 +105,7 @@ const Login = () => {
 
       <form onSubmit={handleSubmit} className="space-y-6">
 
-        {/* Email */}
+      
 
         <div>
 
@@ -125,7 +125,7 @@ const Login = () => {
 
         </div>
 
-        {/* Password */}
+        
 
         <div>
 
@@ -145,33 +145,7 @@ const Login = () => {
 
         </div>
 
-        {/* Role */}
-
-        {/* <div>
-
-          <label className="block text-white font-semibold mb-2">
-            Login As
-          </label>
-
-          <select
-            name="role"
-            value={formData.role}
-            onChange={handleChange}
-            className="w-full bg-gray-200 text-black px-4 py-3 border border-gray-300 focus:outline-none focus:border-black transition"
-          >
-            <option value="freelancer">
-              Freelancer
-            </option>
-
-            <option value="client">
-              Client
-            </option>
-
-          </select>
-
-        </div> */}
-
-        {/* Button */}
+        
 
         <button
           type="submit"
@@ -183,7 +157,7 @@ const Login = () => {
 
       </form>
 
-      {/* Register */}
+     
 
       <p className="text-center text-gray-300 mt-8">
 

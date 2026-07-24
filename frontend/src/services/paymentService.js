@@ -2,7 +2,7 @@ import api from "./api";
 
 
 
-// Get all payments of logged-in user
+
 const getPayments = async () => {
 
   const response = await api.get(
@@ -16,7 +16,7 @@ const getPayments = async () => {
 
 
 
-// Get single payment details
+
 const getPaymentById = async (paymentId) => {
 
   const response = await api.get(
@@ -30,7 +30,7 @@ const getPaymentById = async (paymentId) => {
 
 
 
-// Create payment for project/milestone
+
 const createPayment = async (paymentData) => {
 
   const response = await api.post(
@@ -42,7 +42,7 @@ const createPayment = async (paymentData) => {
 
 };
 
-// Create Razorpay Order
+
 const createOrder = async (amount) => {
 
   const response = await api.post(
@@ -59,7 +59,7 @@ const createOrder = async (amount) => {
 
 
 
-// Update payment status
+
 const updatePaymentStatus = async (
   paymentId,
   statusData
@@ -75,7 +75,7 @@ const updatePaymentStatus = async (
 };
 
 
-// Verify Razorpay Payment
+
 const verifyPayment = async (paymentData) => {
 
   const response = await api.post(

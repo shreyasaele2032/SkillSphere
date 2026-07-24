@@ -99,11 +99,11 @@ return (
     <div className="max-w-7xl mx-auto">
 
 
-      {/* Main Layout */}
+   
 
       <div className="grid lg:grid-cols-12 gap-8">
 
-        {/* LEFT CARD */}
+       
 
         <div className="lg:col-span-4">
 
@@ -153,7 +153,7 @@ return (
               
 
             </div>
-            {/* Bio */}
+          
 
 <div className="mt-8 text-left">
 
@@ -211,7 +211,7 @@ return (
 
         </div>
 
-        {/* RIGHT CARD */}
+      
 
         <div className="lg:col-span-8">
 

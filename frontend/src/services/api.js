@@ -1,9 +1,9 @@
-// src/services/api.js
+
 
 import axios from "axios";
 
 
-// Create Axios instance
+
 const api = axios.create({
 
   baseURL: "http://localhost:8006/api",
@@ -16,7 +16,7 @@ const api = axios.create({
 
 
 
-// Attach JWT token automatically
+
 api.interceptors.request.use(
 
   (config) => {
@@ -43,7 +43,7 @@ api.interceptors.request.use(
 
 
 
-// Handle API errors globally
+
 api.interceptors.response.use(
 
   (response) => {
@@ -65,7 +65,7 @@ api.interceptors.response.use(
       localStorage.removeItem("user");
 
 
-      // Redirect only if user was already logged in
+     
       if (
         window.location.pathname !== "/login" &&
         window.location.pathname !== "/register"

@@ -58,7 +58,7 @@ const Payments = () => {
 
 
 
-      {/* Heading */}
+      
 
       <div className="mb-12">
 
@@ -91,7 +91,7 @@ const Payments = () => {
 
 
 
-      {/* Summary Cards */}
+      
 
 
       <div className="
@@ -245,7 +245,7 @@ const Payments = () => {
 
 
 
-      {/* Payment Table */}
+     
 
 
 

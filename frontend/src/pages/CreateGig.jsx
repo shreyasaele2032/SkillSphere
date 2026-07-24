@@ -1,4 +1,4 @@
-// src/pages/CreateGig.jsx
+
 
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
@@ -132,7 +132,7 @@ const CreateGig = () => {
 
 
 
-        {/* Gig Title */}
+        
 
         <div>
 
@@ -181,8 +181,7 @@ const CreateGig = () => {
 
 
 
-        {/* Category */}
-
+      
         <div>
 
           <label className="block text-white font-semibold mb-2">
@@ -263,7 +262,7 @@ const CreateGig = () => {
 
 
 
-        {/* Price & Delivery */}
+      
 
         <div className="grid md:grid-cols-2 gap-6">
 
@@ -363,7 +362,7 @@ const CreateGig = () => {
 
 
 
-        {/* Location */}
+      
 
         <div>
 
@@ -412,7 +411,7 @@ const CreateGig = () => {
 
 
 
-        {/* Skills */}
+        
 
         <div>
 
@@ -462,7 +461,7 @@ const CreateGig = () => {
 
 
 
-        {/* Description */}
+      
 
         <div>
 
@@ -515,7 +514,7 @@ const CreateGig = () => {
 
 
 
-        {/* Submit Button */}
+    
 
         <button
           type="submit"

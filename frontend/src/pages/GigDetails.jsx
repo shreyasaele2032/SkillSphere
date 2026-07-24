@@ -45,33 +45,7 @@ else{
     }
   };
 
-//   const handleSearch = async () => {
-//   try {
 
-//     setLoading(true);
-
-//     if (search.trim() === "") {
-//       await fetchGigs();
-//       return;
-//     }
-
-//     const data = await gigService.searchGigs(search);
-
-//     setGigs(data.gigs);
-
-//   } catch (error) {
-
-//     console.error(error);
-
-//     alert(
-//       error.response?.data?.message ||
-//       "Search failed."
-//     );
-
-//   } finally {
-//     setLoading(false);
-//   }
-// };
 const handleContact = async (freelancerId) => {
   try {
     const response = await chatService.createChat(freelancerId);
@@ -218,20 +192,7 @@ const handleContact = async (freelancerId) => {
               </p>
 
 
-              {/* <p>
-                <span className="font-bold text-white">
-                  Rating:
-                </span>{" "}
-                ⭐ {gig.rating}
-              </p>
-
-
-              <p>
-                <span className="font-bold text-white">
-                  Reviews:
-                </span>{" "}
-                {gig.reviews}
-              </p> */}
+              
 
 
               <p>

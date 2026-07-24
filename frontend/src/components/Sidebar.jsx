@@ -41,7 +41,7 @@ const Sidebar = () => {
 
   return (
     <aside className="w-72 min-h-screen bg-gray-900 text-white shadow-lg">
-      {/* Logo */}
+ 
       <div className="px-6 py-8 border-b border-gray-700">
         <h1 className="text-3xl font-bold">
           Skill<span className="text-indigo-500">Sphere</span>
@@ -52,7 +52,7 @@ const Sidebar = () => {
         </p>
       </div>
 
-      {/* Navigation */}
+      
       <nav className="mt-6">
         {menuItems.map((item) => (
           <NavLink
@@ -73,7 +73,7 @@ const Sidebar = () => {
         ))}
       </nav>
 
-      {/* Logout */}
+
       <div className="absolute bottom-0 w-72 border-t border-gray-700 p-6">
         <button className="flex items-center gap-3 w-full justify-center bg-red-500 hover:bg-red-600 py-3 rounded-lg transition">
           <FaSignOutAlt />

@@ -38,7 +38,7 @@ const Navbar = () => {
 
         <div className="flex items-center justify-between h-20">
 
-          {/* Logo */}
+         
 
           <Link
             to="/"
@@ -47,7 +47,7 @@ const Navbar = () => {
             SkillSphere
           </Link>
 
-          {/* Desktop Menu */}
+         
 
           <div className="hidden md:flex items-center gap-8 text-black">
 
@@ -58,7 +58,7 @@ const Navbar = () => {
   About
 </NavLink>
 
-            {/* Freelancer */}
+          
 
             {isLoggedIn && user?.role === "freelancer" && (
               <>
@@ -71,7 +71,7 @@ const Navbar = () => {
               </>
             )}
 
-            {/* Client */}
+         
 
             {isLoggedIn && user?.role === "client" && (
               <>
@@ -121,21 +121,7 @@ const Navbar = () => {
   </NavLink>
 
 )}
-                                {/* Notifications */}
-
-                {/* 
-                <button className="relative text-gray-600 hover:text-black text-xl transition duration-300">
-                  <FaBell />
-
-                  {notifications.length > 0 && (
-                    <span className="absolute -top-2 -right-2 bg-black text-white text-[10px] rounded-full px-1.5 py-0.5">
-                      {notifications.length}
-                    </span>
-                  )}
-                </button>
-                */}
-
-                {/* Profile */}
+                           
 
                {user?.role !== "admin" && (
   <NavLink
@@ -160,7 +146,7 @@ const Navbar = () => {
 
           </div>
 
-          {/* Mobile Menu Button */}
+        
 
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -171,8 +157,7 @@ const Navbar = () => {
 
         </div>
 
-        {/* Mobile Menu */}
-
+     
         {menuOpen && (
 
           <div className="md:hidden bg-white border-t text-black border-gray-300 py-6 flex flex-col gap-5">
@@ -193,7 +178,7 @@ const Navbar = () => {
   About
 </NavLink>
 
-            {/* Freelancer */}
+          
 
             {isLoggedIn && user?.role === "freelancer" && (
               <>
@@ -215,7 +200,7 @@ const Navbar = () => {
               </>
             )}
 
-            {/* Client */}
+      
 
             {isLoggedIn && user?.role === "client" && (
               <>

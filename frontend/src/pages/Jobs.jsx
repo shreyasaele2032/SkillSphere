@@ -118,7 +118,7 @@ const Jobs = () => {
 
     <div className="max-w-7xl mx-auto">
 
-      {/* Heading */}
+    
 
       <div className="text-center mb-14">
 
@@ -129,7 +129,7 @@ const Jobs = () => {
 
       </div>
 
-      {/* Jobs */}
+     
 
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
@@ -140,7 +140,7 @@ const Jobs = () => {
             className="bg-white border border-gray-300 shadow-lg hover:shadow-2xl hover:-translate-y-2  rounded-3xl transition-all duration-300 overflow-hidden"
           >
 
-            {/* Top Bar */}
+       
 
             <div className="bg-black text-white px-6 py-4">
 
@@ -150,11 +150,11 @@ const Jobs = () => {
 
             </div>
 
-            {/* Content */}
+         
 
             <div className="p-6 space-y-4">
 
-  {/* Description */}
+
   <div>
     <p className="font-semibold text-gray-600 mb-1">
       Description
@@ -166,7 +166,7 @@ const Jobs = () => {
 
   <div className="border-t border-gray-200"></div>
 
-  {/* Category */}
+
   <div className="flex justify-between">
     <span className="font-semibold text-gray-600">
       Category
@@ -178,7 +178,7 @@ const Jobs = () => {
 
   <div className="border-t border-gray-200"></div>
 
-  {/* Experience */}
+ 
   <div className="flex justify-between">
     <span className="font-semibold text-gray-600">
       Experience
@@ -190,7 +190,7 @@ const Jobs = () => {
 
   <div className="border-t border-gray-200"></div>
 
-  {/* Budget */}
+ 
   <div className="flex justify-between">
     <span className="font-semibold text-gray-600">
       Budget
@@ -202,7 +202,7 @@ const Jobs = () => {
 
   <div className="border-t border-gray-200"></div>
 
-  {/* Location */}
+  
   <div className="flex justify-between">
     <span className="font-semibold text-gray-600">
       Location
@@ -214,7 +214,7 @@ const Jobs = () => {
 
   <div className="border-t border-gray-200"></div>
 
-  {/* Deadline */}
+ 
   <div className="flex justify-between">
     <span className="font-semibold text-gray-600">
       Deadline
@@ -230,7 +230,7 @@ const Jobs = () => {
 
 </div>
 
-            {/* Footer */}
+           
 
             <div className="border-t border-gray-300 p-6">
 
@@ -266,7 +266,7 @@ const Jobs = () => {
 
       </div>
 
-      {/* Empty State */}
+     
 
       {jobs.length === 0 && (
 

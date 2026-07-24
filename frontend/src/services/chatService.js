@@ -1,7 +1,7 @@
 import api from "./api";
 
 
-// Create or get chat
+
 const createChat = async (userId) => {
 
   const response = await api.post(
@@ -17,7 +17,7 @@ const createChat = async (userId) => {
 
 
 
-// Get all conversations of logged-in user
+
 const getConversations = async () => {
 
   const response = await api.get(
@@ -30,7 +30,7 @@ const getConversations = async () => {
 
 
 
-// Get messages of a chat
+
 const getMessages = async (chatId) => {
 
   const response = await api.get(
@@ -41,7 +41,7 @@ const getMessages = async (chatId) => {
 
 };
 
-// Get all clients who contacted the freelancer
+
 const getMyClients = async () => {
 
   const response = await api.get(
@@ -80,7 +80,7 @@ const getMyFreelancers = async () => {
 
 
 
-// Mark messages as read
+
 const markAsRead = async (chatId) => {
 
   const response = await api.put(

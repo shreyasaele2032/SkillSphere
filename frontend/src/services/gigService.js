@@ -1,7 +1,7 @@
 import api from "./api";
 
 
-// Get all gigs
+
 const getGigs = async () => {
 
   const response = await api.get(
@@ -12,7 +12,7 @@ const getGigs = async () => {
 
 };
 
-// Search gigs by category
+
 const searchGigs = async (category) => {
 
   const response = await api.get(
@@ -25,7 +25,7 @@ const searchGigs = async (category) => {
 
 
 
-// Get single gig details
+
 const getGigById = async (gigId) => {
 
   const response = await api.get(
@@ -38,7 +38,7 @@ const getGigById = async (gigId) => {
 
 
 
-// Create a new gig (Freelancer)
+
 const createGig = async (gigData) => {
 
   const response = await api.post(
@@ -52,7 +52,7 @@ const createGig = async (gigData) => {
 
 
 
-// Update gig
+
 const updateGig = async (gigId, gigData) => {
 
   const response = await api.put(
@@ -66,7 +66,7 @@ const updateGig = async (gigId, gigData) => {
 
 
 
-// Delete gig
+
 const deleteGig = async (gigId) => {
 
   const response = await api.delete(
@@ -79,7 +79,7 @@ const deleteGig = async (gigId) => {
 
 
 
-// Get gigs created by a freelancer
+
 const getMyGigs = async () => {
 
   const response = await api.get(

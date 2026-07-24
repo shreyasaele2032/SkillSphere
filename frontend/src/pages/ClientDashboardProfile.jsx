@@ -79,7 +79,7 @@ const ClientDashboardProfile = () => {
 
             <hr className="my-6" />
 
-            {/* About Company */}
+          
 
             <div className="mt-8 text-left">
 
@@ -139,7 +139,7 @@ const ClientDashboardProfile = () => {
 
         </div>
 
-        {/* Right Card */}
+      
 
         <div className="lg:col-span-8">
 

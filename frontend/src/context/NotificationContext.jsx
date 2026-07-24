@@ -16,7 +16,6 @@ export const NotificationProvider = ({ children }) => {
     if (!socket) return;
 
 
-    // Receive notification from backend
     const handleNotification = (notification) => {
     setNotifications((prev) => [
     notification,
@@ -35,7 +34,7 @@ return () => {
 
 
 
-  // Add notification manually
+
   const addNotification = (notification) => {
 
     setNotifications((prev) => [
@@ -47,7 +46,7 @@ return () => {
 
 
 
-  // Remove single notification
+ 
   const removeNotification = (id) => {
 
     setNotifications((prev) =>
@@ -60,7 +59,6 @@ return () => {
 
 
 
-  // Clear all notifications
   const clearNotifications = () => {
 
     setNotifications([]);
@@ -90,7 +88,7 @@ return () => {
 
 
 
-// Custom hook
+
 export const useNotifications = () => {
 
   return useContext(NotificationContext);

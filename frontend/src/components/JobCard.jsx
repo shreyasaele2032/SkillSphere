@@ -28,12 +28,12 @@ const JobCard = ({ job }) => {
         </span>
       </div>
 
-      {/* Description */}
+   
       <p className="text-gray-600 line-clamp-3 mb-5">
         {job.description}
       </p>
 
-      {/* Details */}
+     
       <div className="space-y-3 text-gray-600 mb-6">
         <div className="flex items-center gap-2">
           <FaMapMarkerAlt className="text-indigo-600" />
@@ -58,7 +58,7 @@ const JobCard = ({ job }) => {
         </div>
       </div>
 
-      {/* Skills */}
+     
       <div className="flex flex-wrap gap-2 mb-6">
         {job.skills?.map((skill, index) => (
           <span
@@ -70,7 +70,6 @@ const JobCard = ({ job }) => {
         ))}
       </div>
 
-      {/* Footer */}
       <div className="flex justify-between items-center border-t pt-4">
         <span className="text-gray-500 text-sm">
           Posted {job.postedAgo}

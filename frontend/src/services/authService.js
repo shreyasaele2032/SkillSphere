@@ -1,7 +1,7 @@
 import api from "./api";
 
 
-// Register new user
+
 const register = async (userData) => {
 
   const response = await api.post(
@@ -32,7 +32,7 @@ const register = async (userData) => {
 
 
 
-// Login user
+
 const login = async (userData) => {
 
   const response = await api.post(
@@ -63,7 +63,7 @@ const login = async (userData) => {
 
 
 
-// Logout user
+
 const logout = () => {
 
   localStorage.removeItem("token");
@@ -75,7 +75,7 @@ const logout = () => {
 
 
 
-// Get logged-in user
+
 const getCurrentUser = () => {
 
   const user = localStorage.getItem("user");

@@ -688,24 +688,7 @@ const FreelancerProfile = () => {
     📄 Upload Resume
   </label>
 
-  {/* {profile.resume && (
-  <div className="mt-3">
-    {typeof profile.resume === "string" ? (
-      <a
-        href={`http://localhost:8006/${profile.resume.replace(/\\/g, "/")}`}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="text-blue-300 underline"
-      >
-        📄 View Uploaded Resume
-      </a>
-    ) : (
-      <p className="text-green-300">
-        ✅ {profile.resume.name}
-      </p>
-    )}
-  </div>
-)} */}
+  
 </div>
 
 

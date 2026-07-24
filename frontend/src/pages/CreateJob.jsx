@@ -108,7 +108,7 @@ const CreateJob = () => {
 
 
 
-        {/* Job Title */}
+      
 
         <div>
 
@@ -166,7 +166,7 @@ const CreateJob = () => {
 
 
 
-        {/* Category + Budget */}
+   
 
 
         <div
@@ -338,7 +338,7 @@ const CreateJob = () => {
 
 
 
-        {/* Deadline + Experience */}
+      
 
 
         <div
@@ -502,7 +502,7 @@ const CreateJob = () => {
 
 
 
-        {/* Description */}
+       
 
 
         <div>
@@ -573,7 +573,7 @@ const CreateJob = () => {
 
 
 
-        {/* Submit Button */}
+       
 
 
         <button

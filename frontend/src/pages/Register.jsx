@@ -49,7 +49,7 @@ const Register = () => {
 
 
 
-      // Store user and token in AuthContext
+     
       if (data.user && data.token) {
 
         login(

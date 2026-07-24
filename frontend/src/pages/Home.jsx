@@ -28,11 +28,11 @@ const Home = () => {
   return (
   <div className="bg-white">
 
-    {/* Hero Section */}
+    
 
     <section className="relative overflow-hidden bg-gradient-to-br from-black via-gray-800 to-white text-white py-28">
 
-      {/* Background Circles */}
+     
 
       <div className="absolute top-0 left-0 w-96 h-96 bg-gray-500/20 rounded-full blur-3xl"></div>
 
@@ -69,7 +69,6 @@ const Home = () => {
 
     </section>
 
-    {/* Features */}
 
     <section className="py-24 bg-gray-100">
 
@@ -105,7 +104,7 @@ const Home = () => {
       </div>
 
     </section>
-        {/* Popular Categories */}
+        
 
     <section className="py-24 bg-white">
 
@@ -138,7 +137,6 @@ const Home = () => {
 
     </section>
 
-    {/* Call To Action */}
 
     <section className="bg-gradient-to-r from-black via-gray-800 to-black py-24">
 
@@ -157,12 +155,6 @@ const Home = () => {
 
         <div className="mt-12">
 
-          {/* <Link
-            to="/register"
-            className="inline-block bg-white text-black px-10 py-4 font-semibold shadow-xl hover:bg-gray-200 hover:scale-105 transition-all duration-300"
-          >
-            Get Started Today
-          </Link> */}
 
         </div>
 

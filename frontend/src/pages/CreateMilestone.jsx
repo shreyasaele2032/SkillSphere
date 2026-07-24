@@ -120,7 +120,7 @@ console.log("FREELANCER ID:", freelancerId);
 
 
 
-        {/* Title */}
+      
 
         <div>
 
@@ -186,7 +186,7 @@ console.log("FREELANCER ID:", freelancerId);
 
 
 
-        {/* Description */}
+    
 
 
         <div>
@@ -255,7 +255,7 @@ console.log("FREELANCER ID:", freelancerId);
 
 
 
-        {/* Amount */}
+      
 
 
         <div>
@@ -324,7 +324,7 @@ console.log("FREELANCER ID:", freelancerId);
 
 
 
-        {/* Due Date */}
+      
 
 
         <div>
@@ -391,7 +391,7 @@ console.log("FREELANCER ID:", freelancerId);
 
 
 
-        {/* Submit */}
+    
 
 
         <button

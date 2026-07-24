@@ -1,7 +1,7 @@
 import api from "./api";
 
 
-// Get all jobs
+
 const getJobs = async () => {
 
   const response = await api.get(
@@ -14,7 +14,7 @@ const getJobs = async () => {
 
 
 
-// Get single job details
+
 const getJobById = async (jobId) => {
 
   const response = await api.get(
@@ -27,7 +27,7 @@ const getJobById = async (jobId) => {
 
 
 
-// Create a new job (Client)
+
 const createJob = async (jobData) => {
 
   const response = await api.post(
@@ -41,7 +41,7 @@ const createJob = async (jobData) => {
 
 
 
-// Update job
+
 const updateJob = async (jobId, jobData) => {
 
   const response = await api.put(
@@ -55,7 +55,7 @@ const updateJob = async (jobId, jobData) => {
 
 
 
-// Delete job
+
 const deleteJob = async (jobId) => {
 
   const response = await api.delete(
@@ -68,7 +68,7 @@ const deleteJob = async (jobId) => {
 
 
 
-// Apply for a job (Freelancer)
+
 const applyForJob = async (
   jobId,
   applicationData
@@ -86,7 +86,7 @@ const applyForJob = async (
 
 
 
-// Get jobs posted by logged-in client
+
 const getMyJobs = async () => {
 
   const response = await api.get(
@@ -99,7 +99,7 @@ const getMyJobs = async () => {
 
 
 
-// Get applications received for a job
+
 const getJobApplications = async (jobId) => {
 
   const response = await api.get(

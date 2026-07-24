@@ -17,7 +17,7 @@ export const SocketProvider = ({ children }) => {
   useEffect(() => {
 
 
-    // Connect socket only after login
+  
 
     if (!isAuthenticated || !user) return;
 
@@ -36,19 +36,11 @@ export const SocketProvider = ({ children }) => {
 
 
 
-    // Send user id to server
-    // (we will use this later for notifications)
-
-    // newSocket.emit(
-    //   "join",
-    //   user._id
-    // );
 
 
 
 
-    // Cleanup when logout/unmount
-
+    
     return () => {
 
 

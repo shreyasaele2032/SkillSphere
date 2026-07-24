@@ -55,7 +55,7 @@ const MyGigs = () => {
   >
     <div className="max-w-7xl mx-auto">
 
-      {/* Heading */}
+  
 
       <div className="mb-14">
 
@@ -77,7 +77,7 @@ const MyGigs = () => {
 
       </div>
 
-      {/* Gig Cards */}
+   
 
       <div className="grid lg:grid-cols-2 gap-10">
 
@@ -102,7 +102,7 @@ const MyGigs = () => {
             "
           >
 
-            {/* Header */}
+        
 
             <div className="p-8 border-b border-white/10">
 
@@ -163,7 +163,7 @@ const MyGigs = () => {
 
             </div>
 
-            {/* Description */}
+          
 
             <div className="px-8 py-7">
 

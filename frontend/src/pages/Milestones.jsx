@@ -30,7 +30,7 @@ const fetchMilestones = async () => {
 const handlePayment = async (milestone) => {
   try {
 
-    // Step 1: Create Payment record in MongoDB
+    
     const paymentResponse = await paymentService.createPayment({
   milestone: milestone._id,
   job: milestone.job._id,
@@ -41,14 +41,14 @@ const handlePayment = async (milestone) => {
 
     const payment = paymentResponse.payment;
 
-    // Step 2: Create Razorpay Order
+   
     const orderResponse = await paymentService.createOrder(
       milestone.amount
     );
 
     const order = orderResponse.order;
 
-    // Step 3: Configure Razorpay Checkout
+   
     const options = {
       key: import.meta.env.VITE_RAZORPAY_KEY_ID,
 
@@ -187,7 +187,7 @@ if (loading) {
     <div className="max-w-6xl mx-auto">
 
 
-      {/* Heading */}
+    
       <div className="mb-10">
 
         <h1 className="text-4xl md:text-5xl font-extrabold 
@@ -203,7 +203,7 @@ if (loading) {
 
 
 
-      {/* Progress Card */}
+  
 
       <div
         className="
@@ -264,7 +264,7 @@ if (loading) {
 
 
 
-      {/* Milestone Cards */}
+  
 
       <div className="grid gap-8">
 
@@ -297,7 +297,7 @@ if (loading) {
 
 
 
-            {/* Details */}
+    
 
             <div>
 
@@ -355,7 +355,7 @@ if (loading) {
 
 
 
-            {/* Actions */}
+       
 
 
             <div className="

@@ -63,12 +63,12 @@ function App() {
             <main className="bg-gray-50">
               <Routes>
 
-                {/* Public Routes */}
+              
                 <Route path="/" element={<Home />} />
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
 
-                {/* Dashboard */}
+            
                 <Route 
   path="/dashboard" 
   element={<Dashboard />} 
@@ -83,7 +83,7 @@ function App() {
 
                 <Route path="/profile" element={<Profile />} />
 
-                {/* Profiles */}
+              
                 <Route
   path="/freelancer-profile"
   element={<FreelancerProfile />}
@@ -164,7 +164,7 @@ function App() {
   element={<CreateMilestone />}
 />
 <Route path="/about" element={<About />} />
-                {/* Portfolio */}
+             
                 <Route
                   path="/portfolio"
                   element={<Portfolio />}
@@ -173,22 +173,22 @@ function App() {
 
                 <Route path="/my-clients" element={<MyClients />} />
 
-                {/* Chat */}
+              
                 <Route path="/chat/:chatId" element={<Chat />} />
 
-                {/* Milestones */}
+              
                 <Route
                   path="/milestones"
                   element={<Milestones />}
                 />
 
-                {/* Payments */}
+             
                 <Route
                   path="/payments"
                   element={<Payments />}
                 />
 
-                {/* Admin */}
+           
                 <Route
                   path="/admin-dashboard"
                   element={<AdminDashboard />}
@@ -201,7 +201,7 @@ function App() {
                   element={<ApplyJob />}
                 />
 
-                {/* 404 */}
+             
                 <Route
                   path="*"
                   element={

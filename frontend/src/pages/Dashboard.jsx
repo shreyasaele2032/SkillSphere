@@ -78,7 +78,7 @@ const name = dashboardUser?.name || "User";
 
 
 
-      {/* Welcome Section */}
+     
 
       <div
         className="
@@ -106,7 +106,7 @@ const name = dashboardUser?.name || "User";
       >
 
 
-        {/* Glass effects */}
+        
 
         <div
           className="
@@ -277,7 +277,7 @@ const name = dashboardUser?.name || "User";
 
 
 
-          {/* Account Type Badge */}
+  
 
           <div
             className="
@@ -397,7 +397,7 @@ const name = dashboardUser?.name || "User";
 
 
 
-      {/* Client Gig Search */}
+    
 
 
       {role === "client" && (
@@ -535,7 +535,7 @@ const name = dashboardUser?.name || "User";
         </div>
 
       )}
-      {/* Quick Actions */}
+      
 
 <div
   className="
@@ -612,7 +612,7 @@ const name = dashboardUser?.name || "User";
       <>
 
 
-        {/* My Jobs */}
+   
 
         <Link
   to="/jobs"
@@ -694,7 +694,7 @@ const name = dashboardUser?.name || "User";
 
 
 
-        {/* Applications */}
+       
 
 
         <Link
@@ -779,8 +779,7 @@ const name = dashboardUser?.name || "User";
 
 
 
-        {/* Milestones */}
-
+      
 
        <Link
   to="/milestones"
@@ -936,7 +935,7 @@ const name = dashboardUser?.name || "User";
 
 
       <>
-              {/* Freelancer Cards */}
+           
 
        <Link
   to="/jobs"
