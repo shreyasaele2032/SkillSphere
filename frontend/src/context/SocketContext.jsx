@@ -24,7 +24,7 @@ export const SocketProvider = ({ children }) => {
 
 
     const newSocket = io(
-      "http://localhost:8006",
+      "https://skillsphere-2-h641.onrender.com",
       {
         withCredentials: true,
       }

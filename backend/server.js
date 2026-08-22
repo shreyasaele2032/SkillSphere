@@ -20,12 +20,14 @@ const app = express();
 app.use(
   cors({
     origin: function (origin, callback) {
-
       if (!origin) {
         return callback(null, true);
       }
 
-      if (origin.startsWith("http://localhost:")) {
+      if (
+        origin.startsWith("http://localhost:") ||
+        origin === "https://skill-sphere-pied-eight.vercel.app"
+      ) {
         return callback(null, true);
       }
 
