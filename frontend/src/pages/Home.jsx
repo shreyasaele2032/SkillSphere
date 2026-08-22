@@ -512,12 +512,7 @@ const Home = () => {
 
       <div className="mt-12">
 
-        <Link
-          to="/register"
-          className="inline-block bg-white text-black px-10 py-4 font-semibold hover:bg-gray-200 hover:scale-105 transition-all duration-300"
-        >
-          Get Started
-        </Link>
+        
 
       </div>
 

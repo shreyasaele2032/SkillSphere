@@ -235,7 +235,7 @@ const Footer = () => {
             ">
 
               <a
-                href="https://github.com"
+                href="https://github.com/shreyasaele2032"
                 target="_blank"
                 rel="noreferrer"
                 className="
@@ -250,7 +250,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://linkedin.com"
+                href="https://www.linkedin.com/in/shreyas-a-s-9009b6389/"
                 target="_blank"
                 rel="noreferrer"
                 className="
@@ -265,7 +265,7 @@ const Footer = () => {
               </a>
 
               <a
-                href="https://twitter.com"
+                href="https://x.com/shreyasaele?s=11"
                 target="_blank"
                 rel="noreferrer"
                 className="
