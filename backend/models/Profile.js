@@ -10,7 +10,7 @@ const profileSchema = new mongoose.Schema(
   },
 
 
-  // Freelancer fields
+ 
   title: {
     type: String,
     default: "",
@@ -32,7 +32,7 @@ const profileSchema = new mongoose.Schema(
   },
 
 
-  // Common
+ 
   location: {
     type: String,
     default: "",
@@ -45,7 +45,7 @@ const profileSchema = new mongoose.Schema(
   },
 
 
-  // Client fields
+ 
   companyName: {
     type: String,
     default: "",
@@ -62,7 +62,7 @@ const profileSchema = new mongoose.Schema(
   },
 
 
-  // Links
+  
   github: {
     type: String,
     default: "",
@@ -85,7 +85,7 @@ const profileSchema = new mongoose.Schema(
   },
 
 
-  // Resume
+  
   resume: {
     type: String,
     default: "",

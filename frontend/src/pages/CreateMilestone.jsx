@@ -54,408 +54,315 @@ console.log("FREELANCER ID:", freelancerId);
  return (
   <div
     className="
-    min-h-screen
-    py-10
-    px-4
-
-    bg-gradient-to-br
-    from-black
-    via-gray-700
-    to-white
+      min-h-screen
+      bg-[#f7f7f7]
+      py-12
+      px-5
     "
   >
 
     <div
       className="
-      max-w-2xl
-      mx-auto
-
-      bg-white/20
-
-      backdrop-blur-xl
-
-      border
-      border-white/30
-
-      rounded-3xl
-
-      shadow-2xl
-
-      p-8
-      md:p-10
+        max-w-2xl
+        mx-auto
+        bg-white
+        border
+        border-[#e4e4e4]
+        rounded-xl
+        shadow-sm
+        overflow-hidden
       "
     >
 
+      {/* ================= HEADER ================= */}
 
-
-      <h1
+      <div
         className="
-        text-4xl
-        font-extrabold
-
-        text-white
-
-        mb-8
-
-        drop-shadow-lg
+          px-8
+          md:px-10
+          py-8
+          border-b
+          border-[#e4e4e4]
         "
       >
-        Create Milestone
-      </h1>
 
-
-
-
-
-      <form
-
-        onSubmit={handleSubmit}
-
-        className="space-y-7"
-
-      >
-
-
-
-
-
-
-      
-
-        <div>
-
-          <label
-            className="
-            block
-            font-semibold
-            text-white
-            mb-2
-            "
-          >
-            Milestone Title
-          </label>
-
-
-          <input
-
-            type="text"
-
-            value={title}
-
-            onChange={(e) =>
-              setTitle(e.target.value)
-            }
-
-            required
-
-
-            className="
-            w-full
-
-            bg-white
-
-            border
-            border-gray-300
-
-            text-black
-
-            placeholder-gray-500
-
-            rounded-xl
-
-            px-4
-            py-3
-
-            outline-none
-
-            focus:ring-2
-            focus:ring-blue-500
-
-            transition
-            "
-
-          />
-
-
-        </div>
-
-
-
-
-
-
-
-
-    
-
-
-        <div>
-
-
-          <label
-            className="
-            block
-            font-semibold
-            text-white
-            mb-2
-            "
-          >
-            Description
-          </label>
-
-
-
-          <textarea
-
-            rows="5"
-
-            value={description}
-
-            onChange={(e) =>
-              setDescription(e.target.value)
-            }
-
-
-            className="
-            w-full
-
-            bg-white
-
-            border
-            border-gray-300
-
-            text-black
-
-            placeholder-gray-500
-
-            rounded-xl
-
-            px-4
-            py-3
-
-            resize-none
-
-            outline-none
-
-            focus:ring-2
-            focus:ring-blue-500
-            "
-
-          />
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-      
-
-
-        <div>
-
-
-          <label
-            className="
-            block
-            font-semibold
-            text-white
-            mb-2
-            "
-          >
-            Amount (₹)
-          </label>
-
-
-
-
-          <input
-
-            type="number"
-
-            value={amount}
-
-            onChange={(e) =>
-              setAmount(e.target.value)
-            }
-
-
-            required
-
-
-            className="
-            w-full
-
-            bg-white
-
-            border
-            border-gray-300
-
-            text-black
-
-            rounded-xl
-
-            px-4
-            py-3
-
-            outline-none
-
-            focus:ring-2
-            focus:ring-blue-500
-            "
-
-          />
-
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-      
-
-
-        <div>
-
-
-          <label
-            className="
-            block
-            font-semibold
-            text-white
-            mb-2
-            "
-          >
-            Due Date
-          </label>
-
-
-
-          <input
-
-            type="date"
-
-            value={dueDate}
-
-            onChange={(e) =>
-              setDueDate(e.target.value)
-            }
-
-
-            required
-
-
-            className="
-            w-full
-
-            bg-white
-
-            border
-            border-gray-300
-
-            text-black
-
-            rounded-xl
-
-            px-4
-            py-3
-
-            outline-none
-
-            focus:ring-2
-            focus:ring-blue-500
-            "
-
-          />
-
-
-        </div>
-
-
-
-
-
-
-
-
-
-    
-
-
-        <button
-
-          type="submit"
-
-          disabled={loading}
-
-
+        <h1
           className="
-          w-full
-
-          bg-gradient-to-r
-
-          from-blue-600
-
-          to-indigo-700
-
-
-          hover:from-indigo-700
-
-          hover:to-blue-600
-
-
-          text-white
-
-          py-3
-
-          rounded-xl
-
-          font-bold
-
-          shadow-xl
-
-
-          transition-all
-
-          duration-300
-
-
-          hover:scale-[1.02]
-
-
-          disabled:opacity-50
+            text-4xl
+            md:text-5xl
+            font-extrabold
+            text-[#222325]
+            tracking-tight
           "
+        >
+          Create Milestone
+        </h1>
 
+        <p
+          className="
+            mt-3
+            text-[16px]
+            font-medium
+            text-[#62646a]
+            leading-6
+          "
+        >
+          Define a milestone, set its budget, and choose a deadline.
+        </p>
+
+      </div>
+
+
+      {/* ================= FORM ================= */}
+
+      <div className="p-8 md:p-10">
+
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-7"
         >
 
-          {
-            loading
-            ? "Creating..."
-            : "Create Milestone"
-          }
+
+          {/* MILESTONE TITLE */}
+
+          <div>
+
+            <label
+              className="
+                block
+                text-[17px]
+                font-extrabold
+                text-[#222325]
+                mb-2
+              "
+            >
+              Milestone Title
+            </label>
+
+            <input
+              type="text"
+              value={title}
+              onChange={(e) =>
+                setTitle(e.target.value)
+              }
+              required
+              className="
+                w-full
+                h-[52px]
+                bg-white
+                border
+                border-[#b5b5b5]
+                text-[#222325]
+                text-[16px]
+                font-medium
+                rounded-md
+                px-4
+                outline-none
+                focus:border-[#222325]
+                focus:ring-1
+                focus:ring-[#222325]
+                transition
+              "
+            />
+
+          </div>
 
 
-        </button>
+          {/* DESCRIPTION */}
+
+          <div>
+
+            <label
+              className="
+                block
+                text-[17px]
+                font-extrabold
+                text-[#222325]
+                mb-2
+              "
+            >
+              Description
+            </label>
+
+            <textarea
+              rows="5"
+              value={description}
+              onChange={(e) =>
+                setDescription(e.target.value)
+              }
+              className="
+                w-full
+                bg-white
+                border
+                border-[#b5b5b5]
+                text-[#222325]
+                text-[16px]
+                font-medium
+                rounded-md
+                px-4
+                py-4
+                resize-none
+                leading-7
+                outline-none
+                focus:border-[#222325]
+                focus:ring-1
+                focus:ring-[#222325]
+                transition
+              "
+            />
+
+          </div>
 
 
+          {/* AMOUNT + DATE */}
 
-      </form>
+          <div
+            className="
+              grid
+              md:grid-cols-2
+              gap-6
+            "
+          >
 
+            {/* AMOUNT */}
+
+            <div>
+
+              <label
+                className="
+                  block
+                  text-[17px]
+                  font-extrabold
+                  text-[#222325]
+                  mb-2
+                "
+              >
+                Amount (₹)
+              </label>
+
+              <input
+                type="number"
+                value={amount}
+                onChange={(e) =>
+                  setAmount(e.target.value)
+                }
+                required
+                className="
+                  w-full
+                  h-[52px]
+                  bg-white
+                  border
+                  border-[#b5b5b5]
+                  text-[#222325]
+                  text-[16px]
+                  font-semibold
+                  rounded-md
+                  px-4
+                  outline-none
+                  focus:border-[#222325]
+                  focus:ring-1
+                  focus:ring-[#222325]
+                  transition
+                "
+              />
+
+            </div>
+
+
+            {/* DUE DATE */}
+
+            <div>
+
+              <label
+                className="
+                  block
+                  text-[17px]
+                  font-extrabold
+                  text-[#222325]
+                  mb-2
+                "
+              >
+                Due Date
+              </label>
+
+              <input
+                type="date"
+                value={dueDate}
+                onChange={(e) =>
+                  setDueDate(e.target.value)
+                }
+                required
+                className="
+                  w-full
+                  h-[52px]
+                  bg-white
+                  border
+                  border-[#b5b5b5]
+                  text-[#222325]
+                  text-[16px]
+                  font-medium
+                  rounded-md
+                  px-4
+                  outline-none
+                  focus:border-[#222325]
+                  focus:ring-1
+                  focus:ring-[#222325]
+                  transition
+                "
+              />
+
+            </div>
+
+          </div>
+
+
+          {/* ================= SUBMIT ================= */}
+
+          <div
+            className="
+              pt-5
+              border-t
+              border-[#e4e4e4]
+            "
+          >
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="
+                w-full
+                h-[54px]
+                bg-[#1dbf73]
+                hover:bg-[#19a463]
+                text-white
+                text-[17px]
+                font-extrabold
+                rounded-md
+                shadow-sm
+                transition-all
+                duration-200
+                hover:-translate-y-0.5
+                disabled:opacity-50
+                disabled:cursor-not-allowed
+              "
+            >
+
+              {
+                loading
+                  ? "Creating..."
+                  : "Create Milestone"
+              }
+
+            </button>
+
+          </div>
+
+
+        </form>
+
+      </div>
 
     </div>
-
 
   </div>
 );

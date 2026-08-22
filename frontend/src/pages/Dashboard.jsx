@@ -58,18 +58,13 @@ const name = dashboardUser?.name || "User";
 }, [userId]);
 
   return (
+
   <div
     className="
     min-h-screen
-
-    bg-gradient-to-br
-    from-black
-    via-gray-700
-    to-white
-
-    py-10
+    bg-white
+    py-12
     px-6
-
     font-sans
     "
   >
@@ -77,374 +72,80 @@ const name = dashboardUser?.name || "User";
     <div className="max-w-7xl mx-auto">
 
 
+      {/* ================= HEADER ================= */}
 
-     
+      <div className="mb-14">
 
-      <div
-        className="
-        relative
-        overflow-hidden
-
-        rounded-[28px]
-
-        bg-white/20
-
-        backdrop-blur-xl
-
-        border
-        border-white/30
-
-        p-10
-        md:p-14
-
-        shadow-2xl
-
-        text-white
-
-        mb-10
-        "
-      >
-
-
-        
-
-        <div
+        <p
           className="
-          pointer-events-none
-          absolute
-          inset-0
-
-          bg-gradient-to-br
-          from-white/10
-          via-transparent
-          to-black/20
+          text-sm
+          font-semibold
+          text-[#1dbf73]
+          mb-3
           "
-        />
+        >
+          SkillSphere Marketplace
+        </p>
 
-
-        <div
+        <h1
           className="
-          pointer-events-none
-
-          absolute
-          -top-20
-          -right-20
-
-          w-80
-          h-80
-
-          rounded-full
-
-          bg-blue-500/20
-
-          blur-3xl
+          text-4xl
+          md:text-5xl
+          font-normal
+          tracking-tight
+          text-[#404145]
           "
-        />
+        >
+          Welcome, {name} 👋
+        </h1>
 
-
-        <div
+        <p
           className="
-          pointer-events-none
-
-          absolute
-          -bottom-20
-
-          left-[10%]
-
-          w-72
-          h-72
-
-          rounded-full
-
-          bg-purple-500/20
-
-          blur-3xl
-          "
-        />
-
-
-
-
-
-        <div
-          className="
-          relative
-          z-10
-
-          flex
-          flex-col
-          md:flex-row
-
-          gap-8
-
-          items-center
-
-          justify-between
+          mt-4
+          text-gray-500
+          text-lg
+          max-w-3xl
+          leading-7
           "
         >
 
-
-
-          <div>
-
-
-            <span
-              className="
-              inline-flex
-              items-center
-              gap-2
-
-              text-xs
-
-              font-semibold
-
-              tracking-widest
-
-              uppercase
-
-              text-blue-300
-
-              mb-4
-              "
-            >
-
-              <span
-                className="
-                w-2
-                h-2
-
-                rounded-full
-
-                bg-blue-400
-
-                shadow-lg
-                "
-              />
-
-              SkillSphere Dashboard
-
-            </span>
-
-
-
-
-
-            <h1
-              className="
-              text-4xl
-              md:text-5xl
-
-              font-bold
-
-              tracking-tight
-
-              mb-4
-              "
-            >
-
-              Welcome, {name} 👋
-
-            </h1>
-
-
-
-
-
-            <p
-              className="
-              text-gray-200
-
-              text-lg
-
-              max-w-2xl
-
-              leading-8
-              "
-            >
-
-              {role === "client"
-                ? "Manage your projects, review applications, and hire the best freelancers from SkillSphere."
-                : "Explore projects, apply to exciting opportunities, and grow your freelancing career with SkillSphere."}
-
-            </p>
-
-
-          </div>
-
-
-
-
-
-
-
-  
-
-          <div
-            className="
-            relative
-
-            w-[168px]
-            h-[168px]
-
-            flex-shrink-0
-
-            flex
-
-            items-center
-
-            justify-center
-            "
-          >
-
-
-            <div
-              className="
-              absolute
-
-              inset-0
-
-              rounded-full
-
-              border
-
-              border-dashed
-
-              border-white/40
-              "
-            />
-
-
-
-            <div
-              className="
-              relative
-
-              z-10
-
-              w-[122px]
-
-              h-[122px]
-
-              rounded-full
-
-              bg-white/10
-
-              backdrop-blur-xl
-
-              border
-
-              border-white/30
-
-              flex
-
-              flex-col
-
-              items-center
-
-              justify-center
-
-              text-center
-
-              "
-            >
-
-
-              <span
-                className="
-                text-xs
-
-                uppercase
-
-                tracking-widest
-
-                text-gray-300
-                "
-              >
-                Account
-              </span>
-
-
-              <span
-                className="
-                text-xl
-
-                font-bold
-
-                capitalize
-
-                text-white
-                "
-              >
-                {role}
-              </span>
-
-
-            </div>
-
-
-          </div>
-
-
-
-        </div>
-
+          {role === "client"
+            ? "Manage your projects, review applications, and hire the best freelancers from SkillSphere."
+            : "Explore projects, apply to exciting opportunities, and grow your freelancing career with SkillSphere."}
+
+        </p>
 
       </div>
 
 
 
-
-
-
-
-    
-
+      {/* ================= CLIENT SEARCH ================= */}
 
       {role === "client" && (
 
-        <div
-          className="
-          bg-white/20
-
-          backdrop-blur-xl
-
-          border
-
-          border-white/30
-
-          rounded-[26px]
-
-          shadow-2xl
-
-          p-8
-
-          mb-10
-          "
-        >
-
-
+        <div className="mb-14">
 
           <h2
             className="
-            text-2xl
-
-            font-bold
-
-            text-white
-
-            mb-4
+            text-3xl
+            font-semibold
+            text-[#404145]
+            mb-5
             "
           >
-            Find Freelance Services
+            Find freelance services
           </h2>
 
 
-
-
-
-          <div className="flex gap-4">
-
-
+          <div
+            className="
+            flex
+            flex-col
+            md:flex-row
+            max-w-4xl
+            gap-3
+            "
+          >
 
             <input
               type="text"
@@ -463,33 +164,17 @@ const name = dashboardUser?.name || "User";
 
               className="
               flex-1
-
-              bg-white
-
+              h-14
               border
-
-              border-gray-300
-
-              text-black
-
-              placeholder-gray-500
-
-              rounded-xl
-
+              border-gray-400
+              rounded-md
               px-5
-
-              py-3
-
+              text-gray-900
+              placeholder-gray-500
               focus:outline-none
-
-              focus:ring-2
-
-              focus:ring-blue-500
+              focus:border-gray-700
               "
             />
-
-
-
 
 
             <button
@@ -500,762 +185,627 @@ const name = dashboardUser?.name || "User";
               }}
 
               className="
-              bg-gradient-to-r
-
-              from-blue-600
-
-              to-indigo-700
-
-              hover:from-indigo-700
-
-              hover:to-blue-600
-
+              h-14
+              px-10
+              bg-[#1dbf73]
+              hover:bg-[#19a463]
               text-white
-
-              px-8
-
-              rounded-xl
-
+              rounded-md
               font-semibold
-
               transition
               "
             >
-
               Search
-
             </button>
 
-
-
           </div>
-
-
 
         </div>
 
       )}
-      
-
-<div
-  className="
-  bg-white/20
-
-  backdrop-blur-xl
-
-  border
-
-  border-white/30
-
-  rounded-[26px]
-
-  shadow-2xl
-
-  p-8
-
-  md:p-11
-  "
->
-
-
-  <div className="mb-9">
-
-
-    <h2
-      className="
-      text-2xl
-
-      md:text-3xl
-
-      font-bold
-
-      text-white
-      "
-    >
-      Quick Actions
-    </h2>
 
 
 
-    <p
-      className="
-      text-gray-200
+      {/* ================= QUICK ACTIONS ================= */}
 
-      mt-2
-      "
-    >
-      Access your most frequently used features.
-    </p>
+      <div>
 
+        <div
+          className="
+          flex
+          items-end
+          justify-between
+          mb-8
+          "
+        >
+
+          <div>
+
+            <h2
+              className="
+              text-3xl
+              md:text-4xl
+              font-normal
+              text-[#404145]
+              "
+            >
+              {role === "client"
+                ? "Manage your SkillSphere work"
+                : "Grow your freelancing career"}
+            </h2>
+
+            <p
+              className="
+              mt-3
+              text-gray-500
+              "
+            >
+              Access your most frequently used features.
+            </p>
+
+          </div>
+
+        </div>
+
+
+
+        {/* ================= CLIENT ================= */}
+
+        {role === "client" ? (
+
+          <div
+            className="
+            grid
+            md:grid-cols-2
+            lg:grid-cols-3
+            gap-6
+            "
+          >
+
+
+            {/* My Jobs */}
+
+            <Link
+              to="/jobs"
+              className="
+              group
+              block
+              "
+            >
+
+              <div
+                className="
+                h-64
+                overflow-hidden
+                rounded-sm
+                bg-gray-100
+                "
+              >
+
+                <img
+                  src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=900&q=80"
+                  alt="My Jobs"
+                  className="
+                  w-full
+                  h-full
+                  object-cover
+                  group-hover:scale-105
+                  transition-transform
+                  duration-500
+                  "
+                />
+
+              </div>
+
+
+              <h3
+                className="
+                mt-4
+                text-xl
+                font-bold
+                text-[#404145]
+                group-hover:text-[#1dbf73]
+                transition
+                "
+              >
+                My Jobs
+              </h3>
+
+
+              <p
+                className="
+                mt-2
+                text-gray-500
+                leading-6
+                "
+              >
+                Create, edit and manage all the freelance projects you have posted.
+              </p>
+
+            </Link>
+
+
+
+            {/* Applications */}
+
+            <Link
+              to="/applications"
+              className="
+              group
+              block
+              "
+            >
+
+              <div
+                className="
+                h-64
+                overflow-hidden
+                rounded-sm
+                bg-gray-100
+                "
+              >
+
+                <img
+                  src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=900&q=80"
+                  alt="Applications"
+                  className="
+                  w-full
+                  h-full
+                  object-cover
+                  group-hover:scale-105
+                  transition-transform
+                  duration-500
+                  "
+                />
+
+              </div>
+
+
+              <h3
+                className="
+                mt-4
+                text-xl
+                font-bold
+                text-[#404145]
+                group-hover:text-[#1dbf73]
+                transition
+                "
+              >
+                View Applications
+              </h3>
+
+
+              <p className="mt-2 text-gray-500 leading-6">
+                Review freelancers who applied for your projects and hire the best talent.
+              </p>
+
+            </Link>
+
+
+
+            {/* Milestones */}
+
+            <Link
+              to="/milestones"
+              className="
+              group
+              block
+              "
+            >
+
+              <div
+                className="
+                h-64
+                overflow-hidden
+                rounded-sm
+                bg-gray-100
+                "
+              >
+
+                <img
+                  src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&w=900&q=80"
+                  alt="Milestones"
+                  className="
+                  w-full
+                  h-full
+                  object-cover
+                  group-hover:scale-105
+                  transition-transform
+                  duration-500
+                  "
+                />
+
+              </div>
+
+
+              <h3
+                className="
+                mt-4
+                text-xl
+                font-bold
+                text-[#404145]
+                group-hover:text-[#1dbf73]
+                transition
+                "
+              >
+                Milestones
+              </h3>
+
+
+              <p className="mt-2 text-gray-500 leading-6">
+                View project milestones and securely pay freelancers.
+              </p>
+
+            </Link>
+
+
+
+            {/* Contacted Freelancers */}
+
+            <Link
+              to="/my-freelancers"
+              className="
+              group
+              block
+              "
+            >
+
+              <div
+                className="
+                h-64
+                overflow-hidden
+                rounded-sm
+                bg-gray-100
+                "
+              >
+
+                <img
+                  src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=900&q=80"
+                  alt="Contacted Freelancers"
+                  className="
+                  w-full
+                  h-full
+                  object-cover
+                  group-hover:scale-105
+                  transition-transform
+                  duration-500
+                  "
+                />
+
+              </div>
+
+
+              <h3
+                className="
+                mt-4
+                text-xl
+                font-bold
+                text-[#404145]
+                group-hover:text-[#1dbf73]
+                transition
+                "
+              >
+                Contacted Freelancers
+              </h3>
+
+
+              <p className="mt-2 text-gray-500 leading-6">
+                View all freelancers you've contacted and continue your conversations.
+              </p>
+
+            </Link>
+
+
+          </div>
+
+        ) : (
+
+
+          /* ================= FREELANCER ================= */
+
+          <div
+            className="
+            grid
+            md:grid-cols-2
+            lg:grid-cols-3
+            gap-6
+            "
+          >
+
+
+            {/* Browse Jobs */}
+
+            <Link
+              to="/jobs"
+              className="
+              group
+              block
+              "
+            >
+
+              <div
+                className="
+                h-64
+                overflow-hidden
+                rounded-sm
+                bg-gray-100
+                "
+              >
+
+                <img
+                  src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=900&q=80"
+                  alt="Browse Jobs"
+                  className="
+                  w-full
+                  h-full
+                  object-cover
+                  group-hover:scale-105
+                  transition-transform
+                  duration-500
+                  "
+                />
+
+              </div>
+
+
+              <h3
+                className="
+                mt-4
+                text-xl
+                font-bold
+                text-[#404145]
+                group-hover:text-[#1dbf73]
+                transition
+                "
+              >
+                Browse Jobs
+              </h3>
+
+
+              <p className="mt-2 text-gray-500 leading-6">
+                Explore freelance opportunities that match your skills.
+              </p>
+
+            </Link>
+
+
+
+            {/* My Applications */}
+
+            <Link
+              to="/my-applications"
+              className="
+              group
+              block
+              "
+            >
+
+              <div
+                className="
+                h-64
+                overflow-hidden
+                rounded-sm
+                bg-gray-100
+                "
+              >
+
+                <img
+                  src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=900&q=80"
+                  alt="My Applications"
+                  className="
+                  w-full
+                  h-full
+                  object-cover
+                  group-hover:scale-105
+                  transition-transform
+                  duration-500
+                  "
+                />
+
+              </div>
+
+
+              <h3
+                className="
+                mt-4
+                text-xl
+                font-bold
+                text-[#404145]
+                group-hover:text-[#1dbf73]
+                transition
+                "
+              >
+                My Applications
+              </h3>
+
+
+              <p className="mt-2 text-gray-500 leading-6">
+                Track all the jobs you've applied for in one place.
+              </p>
+
+            </Link>
+
+
+
+            {/* My Gigs */}
+
+            <Link
+              to="/my-gigs"
+              className="
+              group
+              block
+              "
+            >
+
+              <div
+                className="
+                h-64
+                overflow-hidden
+                rounded-sm
+                bg-gray-100
+                "
+              >
+
+                <img
+                  src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=900&q=80"
+                  alt="My Gigs"
+                  className="
+                  w-full
+                  h-full
+                  object-cover
+                  group-hover:scale-105
+                  transition-transform
+                  duration-500
+                  "
+                />
+
+              </div>
+
+
+              <h3
+                className="
+                mt-4
+                text-xl
+                font-bold
+                text-[#404145]
+                group-hover:text-[#1dbf73]
+                transition
+                "
+              >
+                My Gigs
+              </h3>
+
+
+              <p className="mt-2 text-gray-500 leading-6">
+                View and manage all the gigs you've created.
+              </p>
+
+            </Link>
+
+
+
+            {/* My Clients */}
+
+            <Link
+              to="/my-clients"
+              className="
+              group
+              block
+              "
+            >
+
+              <div
+                className="
+                h-64
+                overflow-hidden
+                rounded-sm
+                bg-gray-100
+                "
+              >
+
+                <img
+                  src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=900&q=80"
+                  alt="My Clients"
+                  className="
+                  w-full
+                  h-full
+                  object-cover
+                  group-hover:scale-105
+                  transition-transform
+                  duration-500
+                  "
+                />
+
+              </div>
+
+
+              <h3
+                className="
+                mt-4
+                text-xl
+                font-bold
+                text-[#404145]
+                group-hover:text-[#1dbf73]
+                transition
+                "
+              >
+                My Clients
+              </h3>
+
+
+              <p className="mt-2 text-gray-500 leading-6">
+                View clients who contacted you and continue your conversations.
+              </p>
+
+            </Link>
+
+
+
+            {/* My Milestones */}
+
+            <Link
+              to="/milestones"
+              className="
+              group
+              block
+              "
+            >
+
+              <div
+                className="
+                h-64
+                overflow-hidden
+                rounded-sm
+                bg-gray-100
+                "
+              >
+
+                <img
+                  src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=900&q=80"
+                  alt="My Milestones"
+                  className="
+                  w-full
+                  h-full
+                  object-cover
+                  group-hover:scale-105
+                  transition-transform
+                  duration-500
+                  "
+                />
+
+              </div>
+
+
+              <h3
+                className="
+                mt-4
+                text-xl
+                font-bold
+                text-[#404145]
+                group-hover:text-[#1dbf73]
+                transition
+                "
+              >
+                My Milestones
+              </h3>
+
+
+              <p className="mt-2 text-gray-500 leading-6">
+                Track project progress, submit work, and manage milestone payments.
+              </p>
+
+            </Link>
+
+
+          </div>
+
+        )}
+
+      </div>
+
+    </div>
 
   </div>
-
-
-
-
-
-  <div
-    className="
-    grid
-
-    md:grid-cols-3
-
-    gap-6
-    "
-  >
-
-
-
-
-    {role === "client" ? (
-
-      <>
-
-
-   
-
-        <Link
-  to="/jobs"
-  className="
-  group
-  relative
-  overflow-hidden
-
-  bg-white/30
-  backdrop-blur-xl
-
-  border
-  border-white/20
-
-  rounded-3xl
-
-  p-8
-
-  shadow-2xl
-
-  hover:bg-white/20
-  hover:-translate-y-2
-  hover:shadow-cyan-500/20
-
-  transition-all
-  duration-300
-  "
->
-
-  <div className="absolute left-0 top-0 h-full w-2 rounded-l-3xl"></div>
-
-  <div
-    className="
-    w-16
-    h-16
-
-    rounded-2xl
-
-    bg-cyan-500/20
-
-    flex
-    items-center
-    justify-center
-
-    text-cyan-400
-    text-3xl
-
-    mb-6
-
-    group-hover:scale-110
-
-    transition
-    "
-  >
-    <FaBriefcase />
-  </div>
-
-  <h3 className="text-2xl font-bold text-black">
-    My Jobs
-  </h3>
-
-  <p
-    className="
-    mt-3
-
-    text-black
-
-    leading-7
-    "
-  >
-    Create, edit and manage all the freelance projects you have posted.
-  </p>
-
-</Link>
-
-
-
-
-
-
-
-       
-
-
-        <Link
-  to="/applications"
-  className="
-  group
-  relative
-  overflow-hidden
-
-  bg-white/30
-  backdrop-blur-xl
-
-  border
-  border-white/20
-
-  rounded-3xl
-
-  p-8
-
-  shadow-2xl
-
-  hover:bg-white/20
-  hover:-translate-y-2
-  hover:shadow-amber-500/20
-
-  transition-all
-  duration-300
-  "
->
-
-  <div className="absolute left-0 top-0 h-full w-2 rounded-l-3xl"></div>
-
-  <div
-    className="
-    w-16
-    h-16
-
-    rounded-2xl
-
-    bg-amber-500/20
-
-    flex
-    items-center
-    justify-center
-
-    text-amber-400
-    text-3xl
-
-    mb-6
-
-    group-hover:scale-110
-
-    transition
-    "
-  >
-    <FaClipboardList />
-  </div>
-
-  <h3 className="text-2xl font-bold text-black">
-    View Applications
-  </h3>
-
-  <p
-    className="
-    mt-3
-
-    text-black
-
-    leading-7
-    "
-  >
-    Review freelancers who applied for your projects and hire the best talent.
-  </p>
-
-</Link>
-
-
-
-
-
-
-
-
-
-      
-
-       <Link
-  to="/milestones"
-  className="
-  group
-  relative
-  overflow-hidden
-
-  bg-white/30
-  backdrop-blur-xl
-
-  border
-  border-white/20
-
-  rounded-3xl
-
-  p-8
-
-  shadow-2xl
-
-  hover:bg-white/20
-  hover:-translate-y-2
-  hover:shadow-emerald-500/20
-
-  transition-all
-  duration-300
-  "
->
-
-  <div className="absolute left-0 top-0 h-full w-2 rounded-l-3xl"></div>
-
-  <div
-    className="
-    w-16
-    h-16
-
-    rounded-2xl
-
-    bg-emerald-500/20
-
-    flex
-    items-center
-    justify-center
-
-    text-emerald-400
-    text-3xl
-
-    mb-6
-
-    group-hover:scale-110
-
-    transition
-    "
-  >
-    <FaMoneyCheckAlt />
-  </div>
-
-  <h3 className="text-2xl font-bold text-black">
-    Milestones
-  </h3>
-
-  <p
-    className="
-    mt-3
-    
-
-    text-black
-
-    leading-7
-    "
-  >
-    View project milestones and securely pay freelancers.
-  </p>
-
-</Link>
-
-<Link
-  to="/my-freelancers"
-  className="
-  group
-  relative
-  overflow-hidden
-
-  bg-white/30
-  backdrop-blur-xl
-
-  border
-  border-white/20
-
-  rounded-3xl
-
-  p-8
-
-  shadow-2xl
-
-  hover:bg-white/20
-  hover:-translate-y-2
-  hover:shadow-purple-500/20
-
-  transition-all
-  duration-300
-  "
->
-
-  <div
-    className="
-    w-16
-    h-16
-
-    rounded-2xl
-
-    bg-purple-500/20
-
-    flex
-    items-center
-    justify-center
-
-    text-purple-400
-    text-3xl
-
-    mb-6
-
-    group-hover:scale-110
-
-    transition
-    "
-  >
-    💬
-  </div>
-
-  <h3 className="text-2xl font-bold text-black">
-    Contacted Freelancers
-  </h3>
-
-  <p
-    className="
-    mt-3
-
-    text-black
-
-    leading-7
-    "
-  >
-    View all freelancers you've contacted and continue your conversations.
-  </p>
-
-</Link>
-
-      </>
-
-    ) : (
-
-
-
-      <>
-           
-
-       <Link
-  to="/jobs"
-  className="
-  group
-
-  rounded-[20px]
-
-  bg-white/30
-
-  backdrop-blur-xl
-
-  border
-
-  border-white/30
-
-  text-black
-
-  p-8
-
-  shadow-2xl
-
-  hover:bg-white/30
-
-  hover:-translate-y-2
-
-  transition-all
-
-  duration-300
-  "
->
-
-  <div
-    className="
-    text-4xl
-    mb-4
-
-    transition-transform
-    duration-300
-
-    group-hover:scale-110
-    "
-  >
-    🔍
-  </div>
-
-
-  <h3 className="text-2xl font-bold">
-    Browse Jobs
-  </h3>
-
-
-  <p className="mt-2 text-black leading-relaxed font-bold">
-    Explore freelance opportunities that match your skills.
-  </p>
-
-</Link>
-
-
-
-
-
-<Link
-  to="/my-applications"
-  className="
-  group
-
-  rounded-[20px]
-
-  bg-white/30
-
-  backdrop-blur-xl
-
-  border
-
-  border-white/30
-
-  text-black
-
-  p-8
-
-  shadow-2xl
-
-  hover:bg-white/30
-
-  hover:-translate-y-2
-
-  transition-all
-
-  duration-300
-  "
->
-
-  <div
-    className="
-    text-4xl
-    mb-4
-
-    transition-transform
-    duration-300
-
-    group-hover:scale-110
-    "
-  >
-    📑
-  </div>
-
-
-  <h3 className="text-2xl font-bold">
-    My Applications
-  </h3>
-
-
-  <p className="mt-2 text-black leading-relaxed font-bold">
-    Track all the jobs you've applied for in one place.
-  </p>
-
-</Link>
-
-
-
-
-
-
-<Link
-  to="/my-gigs"
-  className="
-  group
-
-  rounded-[20px]
-
-  bg-white/30
-
-  backdrop-blur-xl
-
-  border
-
-  border-white/30
-
-  text-black
-
-  p-8
-
-  shadow-2xl
-
-  hover:bg-white/30
-
-  hover:-translate-y-2
-
-  transition-all
-
-  duration-300
-  "
->
-
-  <div
-    className="
-    text-4xl
-    mb-4
-
-    transition-transform
-    duration-300
-
-    group-hover:scale-110
-    "
-  >
-    🚀
-  </div>
-
-
-  <h3 className="text-2xl font-bold">
-    My Gigs
-  </h3>
-
-
-  <p className="mt-2 text-black leading-relaxed font-bold">
-    View and manage all the gigs you've created.
-  </p>
-
-</Link>
-
-
-
-
-
-
-
-<Link
-  to="/my-clients"
-  className="
-  group
-
-  rounded-[20px]
-
-  bg-white/30
-
-  backdrop-blur-xl
-
-  border
-
-  border-white/30
-
-  text-black
-
-  p-8
-
-  shadow-2xl
-
-  hover:bg-white/30
-
-  hover:-translate-y-2
-
-  transition-all
-
-  duration-300
-  "
->
-
-  <div
-    className="
-    text-4xl
-    mb-4
-
-    transition-transform
-    duration-300
-
-    group-hover:scale-110
-    "
-  >
-    🤝
-  </div>
-
-
-  <h3 className="text-2xl font-bold">
-    My Clients
-  </h3>
-
-
-  <p className="mt-2 text-black leading-relaxed font-bold">
-    View clients who contacted you and continue your conversations.
-  </p>
-
-</Link>
-
-
-<Link
-  to="/milestones"
-  className="
-  group
-
-  rounded-[20px]
-
-  bg-white/30
-
-  backdrop-blur-xl
-
-  border
-
-  border-white/30
-
-  text-black
-
-  p-8
-
-  shadow-2xl
-
-  hover:bg-white/30
-
-  hover:-translate-y-2
-
-  transition-all
-
-  duration-300
-  "
->
-
-  <div
-    className="
-    text-4xl
-    mb-4
-
-    transition-transform
-    duration-300
-
-    group-hover:scale-110
-    "
-  >
-    💰
-  </div>
-
-
-  <h3 className="text-2xl font-bold">
-    My Milestones
-  </h3>
-
-
-  <p className="mt-2 text-black leading-relaxed font-bold">
-    Track project progress, submit work, and manage milestone payments.
-  </p>
-
-</Link>
-
-
-
-      </>
-
-    )}
-
-
-
-  </div>
-
-
-</div>
-
-
-
-</div>
-
-</div>
 
 );
 };

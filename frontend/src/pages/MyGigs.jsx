@@ -44,135 +44,257 @@ const MyGigs = () => {
   return (
   <div
     className="
-    min-h-screen
-    bg-gradient-to-br
-    from-slate-950
-    via-gray-900
-    to-gray-700
-    py-14
-    px-6
+      min-h-screen
+      bg-[#f7f7f7]
+      py-12
+      px-5
     "
   >
+
     <div className="max-w-7xl mx-auto">
 
-  
 
-      <div className="mb-14">
+      {/* ================= HEADER ================= */}
 
-        <h1
-          className="
-          text-5xl
-          md:text-6xl
-          font-extrabold
-          text-white
-          tracking-tight
-          "
-        >
-          My Gigs
-        </h1>
+      <div
+        className="
+          flex
+          flex-col
+          md:flex-row
+          md:items-end
+          md:justify-between
+          gap-4
+          mb-10
+          pb-8
+          border-b
+          border-[#e4e4e4]
+        "
+      >
 
-        <p className="text-gray-300 mt-3 text-lg">
-          Manage all your published gigs in one place.
-        </p>
+        <div>
+
+          <h1
+            className="
+              text-4xl
+              md:text-5xl
+              font-extrabold
+              tracking-tight
+              text-[#222325]
+            "
+          >
+            My Gigs
+          </h1>
+
+          <p
+            className="
+              text-lg
+              font-medium
+              text-[#62646a]
+              mt-3
+            "
+          >
+            Manage all your published gigs in one place.
+          </p>
+
+        </div>
 
       </div>
 
-   
 
-      <div className="grid lg:grid-cols-2 gap-10">
+      {/* ================= GIGS ================= */}
+
+      <div
+        className="
+          grid
+          md:grid-cols-2
+          gap-6
+        "
+      >
 
         {gigs.map((gig) => (
 
           <div
             key={gig._id}
             className="
-            group
-            bg-white/10
-            backdrop-blur-2xl
-            border
-            border-white/20
-            rounded-3xl
-            shadow-2xl
-            overflow-hidden
-            transition-all
-            duration-500
-            hover:-translate-y-2
-            hover:shadow-black/40
-            hover:border-white/40
+              group
+              bg-white
+              border
+              border-[#e4e4e4]
+              rounded-xl
+              overflow-hidden
+              shadow-sm
+              hover:shadow-lg
+              transition-all
+              duration-300
             "
           >
 
-        
 
-            <div className="p-8 border-b border-white/10">
+            {/* ================= GIG HEADER ================= */}
 
-              <h2
-                className="
-                text-3xl
-                font-bold
-                text-white
-                mb-3
-                "
-              >
-                {gig.title}
-              </h2>
+            <div
+              className="
+                p-7
+                border-b
+                border-[#eeeeee]
+              "
+            >
 
               <div
                 className="
-                grid
-                md:grid-cols-2
-                gap-y-4
-                gap-x-8
-                text-gray-300
+                  flex
+                  items-start
+                  justify-between
+                  gap-5
                 "
               >
 
-                <p>
-                  <span className="font-semibold text-white">
-                    Category
-                  </span>
-                  <br />
-                  {gig.category}
-                </p>
+                <div className="flex-1">
 
-                <p>
-                  <span className="font-semibold text-white">
-                    Price
-                  </span>
-                  <br />
-                  ₹{gig.price}
-                </p>
+                  <h2
+                    className="
+                      text-2xl
+                      md:text-3xl
+                      font-extrabold
+                      text-[#222325]
+                      leading-tight
+                      group-hover:text-[#1dbf73]
+                      transition
+                    "
+                  >
+                    {gig.title}
+                  </h2>
 
-                <p>
-                  <span className="font-semibold text-white">
+                  <p
+                    className="
+                      mt-2
+                      text-sm
+                      font-semibold
+                      text-[#62646a]
+                    "
+                  >
+                    {gig.category}
+                  </p>
+
+                </div>
+
+
+                {/* PRICE */}
+
+                <div className="
+                  text-right
+                  shrink-0
+                ">
+
+                  <p
+                    className="
+                      text-xs
+                      font-bold
+                      text-[#74767e]
+                      uppercase
+                      tracking-wide
+                    "
+                  >
+                    Starting at
+                  </p>
+
+                  <p
+                    className="
+                      text-2xl
+                      font-extrabold
+                      text-[#222325]
+                      mt-1
+                    "
+                  >
+                    ₹{gig.price}
+                  </p>
+
+                </div>
+
+              </div>
+
+
+              {/* ================= DETAILS ================= */}
+
+              <div
+                className="
+                  grid
+                  grid-cols-2
+                  gap-5
+                  mt-7
+                "
+              >
+
+                <div>
+
+                  <p
+                    className="
+                      text-xs
+                      font-bold
+                      uppercase
+                      tracking-wide
+                      text-[#74767e]
+                    "
+                  >
                     Delivery
-                  </span>
-                  <br />
-                  {gig.deliveryTime} Days
-                </p>
+                  </p>
 
-                <p>
-                  <span className="font-semibold text-white">
+                  <p
+                    className="
+                      mt-1
+                      text-[16px]
+                      font-extrabold
+                      text-[#222325]
+                    "
+                  >
+                    {gig.deliveryTime} Days
+                  </p>
+
+                </div>
+
+
+                <div>
+
+                  <p
+                    className="
+                      text-xs
+                      font-bold
+                      uppercase
+                      tracking-wide
+                      text-[#74767e]
+                    "
+                  >
                     Location
-                  </span>
-                  <br />
-                  {gig.location}
-                </p>
+                  </p>
+
+                  <p
+                    className="
+                      mt-1
+                      text-[16px]
+                      font-extrabold
+                      text-[#222325]
+                    "
+                  >
+                    {gig.location}
+                  </p>
+
+                </div>
 
               </div>
 
             </div>
 
-          
 
-            <div className="px-8 py-7">
+            {/* ================= DESCRIPTION ================= */}
+
+            <div className="px-7 pt-7">
 
               <h3
                 className="
-                text-xl
-                font-bold
-                text-white
-                mb-4
+                  text-lg
+                  font-extrabold
+                  text-[#222325]
+                  mb-3
                 "
               >
                 Description
@@ -180,8 +302,10 @@ const MyGigs = () => {
 
               <p
                 className="
-                text-gray-300
-                leading-8
+                  text-[#62646a]
+                  leading-7
+                  text-[15px]
+                  font-medium
                 "
               >
                 {gig.description}
@@ -189,39 +313,41 @@ const MyGigs = () => {
 
             </div>
 
-            {/* Skills */}
 
-            <div className="px-8 pb-2">
+            {/* ================= SKILLS ================= */}
+
+            <div className="px-7 pt-7">
 
               <h3
                 className="
-                text-xl
-                font-bold
-                text-white
-                mb-4
+                  text-lg
+                  font-extrabold
+                  text-[#222325]
+                  mb-4
                 "
               >
                 Skills
               </h3>
 
-              <div className="flex flex-wrap gap-3">
+
+              <div className="flex flex-wrap gap-2.5">
 
                 {gig.skills.map((skill, index) => (
 
                   <span
                     key={index}
                     className="
-                    px-5
-                    py-2
-                    rounded-full
-                    bg-white/15
-                    border
-                    border-white/20
-                    text-white
-                    text-sm
-                    font-medium
-                    hover:bg-white/25
-                    transition
+                      px-4
+                      py-2
+                      rounded-full
+                      bg-[#f2f2f2]
+                      border
+                      border-[#e4e4e4]
+                      text-[#222325]
+                      text-sm
+                      font-bold
+                      hover:bg-[#e8e8e8]
+                      transition
                     "
                   >
                     {skill}
@@ -233,34 +359,65 @@ const MyGigs = () => {
 
             </div>
 
-            {/* Footer */}
+
+            {/* ================= FOOTER ================= */}
 
             <div
               className="
-              px-8
-              py-7
-              mt-6
-              border-t
-              border-white/10
-              flex
-              justify-end
+                px-7
+                py-6
+                mt-7
+                border-t
+                border-[#eeeeee]
+                flex
+                items-center
+                justify-between
+                gap-4
               "
             >
+
+              <div>
+
+                <p
+                  className="
+                    text-xs
+                    font-bold
+                    uppercase
+                    tracking-wide
+                    text-[#74767e]
+                  "
+                >
+                  Gig Status
+                </p>
+
+                <p
+                  className="
+                    text-sm
+                    font-extrabold
+                    text-[#1dbf73]
+                    mt-1
+                  "
+                >
+                  Active
+                </p>
+
+              </div>
+
 
               <Link
                 to="/freelancer-chats"
                 className="
-                bg-white
-                text-black
-                px-8
-                py-3
-                rounded-xl
-                font-semibold
-                shadow-lg
-                hover:bg-gray-200
-                hover:scale-105
-                transition-all
-                duration-300
+                  bg-[#222325]
+                  text-white
+                  px-7
+                  py-3
+                  rounded-md
+                  font-extrabold
+                  text-[15px]
+                  hover:bg-black
+                  hover:-translate-y-0.5
+                  transition-all
+                  duration-200
                 "
               >
                 Open Chats
@@ -268,11 +425,13 @@ const MyGigs = () => {
 
             </div>
 
+
           </div>
 
         ))}
 
       </div>
+
 
     </div>
 

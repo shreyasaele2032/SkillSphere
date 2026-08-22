@@ -50,13 +50,9 @@ const CreateJob = () => {
   <div
     className="
     min-h-screen
-    py-10
+    py-12
     px-4
-
-    bg-gradient-to-br
-    from-black
-    via-gray-700
-    to-white
+    bg-white
     "
   >
 
@@ -64,39 +60,28 @@ const CreateJob = () => {
       className="
       max-w-4xl
       mx-auto
-
-      bg-white/20
-      backdrop-blur-xl
-
+      bg-white
       border
-      border-white/30
-
-      shadow-2xl
-
-      rounded-3xl
-
+      border-gray-200
+      shadow-sm
+      rounded-2xl
       p-8
       md:p-10
       "
     >
-
-
 
       <h2
         className="
         text-4xl
         font-extrabold
         text-center
-        text-white
+        text-gray-900
         mb-10
-        drop-shadow-lg
+        tracking-tight
         "
       >
         Create a New Job
       </h2>
-
-
-
 
 
       <form
@@ -105,11 +90,6 @@ const CreateJob = () => {
       >
 
 
-
-
-
-      
-
         <div>
 
           <label
@@ -117,7 +97,7 @@ const CreateJob = () => {
             block
             mb-2
             font-semibold
-            text-white
+            text-gray-900
             "
           >
             Job Title
@@ -134,39 +114,23 @@ const CreateJob = () => {
 
             className="
             w-full
-
             bg-white
-
             border
             border-gray-300
-
-            text-black
-
-            placeholder-gray-500
-
-            rounded-xl
-
+            text-gray-900
+            placeholder-gray-400
+            rounded-lg
             px-4
             py-3
-
             outline-none
-
-            focus:ring-2
-            focus:ring-blue-500
-
             transition
+            focus:border-[#1dbf73]
+            focus:ring-2
+            focus:ring-[#1dbf73]/20
             "
           />
 
         </div>
-
-
-
-
-
-
-
-   
 
 
         <div
@@ -178,7 +142,6 @@ const CreateJob = () => {
         >
 
 
-
           <div>
 
             <label
@@ -186,7 +149,7 @@ const CreateJob = () => {
               block
               mb-2
               font-semibold
-              text-white
+              text-gray-900
               "
             >
               Category
@@ -203,26 +166,20 @@ const CreateJob = () => {
 
               required
 
-
               className="
               w-full
-
               bg-white
-
               border
               border-gray-300
-
-              text-black
-
-              rounded-xl
-
+              text-gray-900
+              rounded-lg
               px-4
               py-3
-
               outline-none
-
+              transition
+              focus:border-[#1dbf73]
               focus:ring-2
-              focus:ring-blue-500
+              focus:ring-[#1dbf73]/20
               "
             >
 
@@ -253,6 +210,7 @@ const CreateJob = () => {
               <option>
                 Digital Marketing
               </option>
+
               <option>
                 Generative AI
               </option>
@@ -264,10 +222,6 @@ const CreateJob = () => {
           </div>
 
 
-
-
-
-
           <div>
 
 
@@ -276,12 +230,11 @@ const CreateJob = () => {
               block
               mb-2
               font-semibold
-              text-white
+              text-gray-900
               "
             >
               Budget (₹)
             </label>
-
 
 
             <input
@@ -298,28 +251,21 @@ const CreateJob = () => {
 
               required
 
-
               className="
               w-full
-
               bg-white
-
               border
               border-gray-300
-
-              text-black
-
-              placeholder-gray-500
-
-              rounded-xl
-
+              text-gray-900
+              placeholder-gray-400
+              rounded-lg
               px-4
               py-3
-
               outline-none
-
+              transition
+              focus:border-[#1dbf73]
               focus:ring-2
-              focus:ring-blue-500
+              focus:ring-[#1dbf73]/20
               "
             />
 
@@ -327,18 +273,7 @@ const CreateJob = () => {
           </div>
 
 
-
         </div>
-
-
-
-
-
-
-
-
-
-      
 
 
         <div
@@ -350,7 +285,6 @@ const CreateJob = () => {
         >
 
 
-
           <div>
 
 
@@ -359,7 +293,7 @@ const CreateJob = () => {
               block
               mb-2
               font-semibold
-              text-white
+              text-gray-900
               "
             >
               Deadline
@@ -378,36 +312,25 @@ const CreateJob = () => {
 
               required
 
-
               className="
               w-full
-
               bg-white
-
               border
               border-gray-300
-
-              text-black
-
-              rounded-xl
-
+              text-gray-900
+              rounded-lg
               px-4
               py-3
-
               outline-none
-
+              transition
+              focus:border-[#1dbf73]
               focus:ring-2
-              focus:ring-blue-500
+              focus:ring-[#1dbf73]/20
               "
             />
 
 
           </div>
-
-
-
-
-
 
 
           <div>
@@ -418,7 +341,7 @@ const CreateJob = () => {
               block
               mb-2
               font-semibold
-              text-white
+              text-gray-900
               "
             >
               Experience Required
@@ -435,29 +358,22 @@ const CreateJob = () => {
 
               required
 
-
               className="
               w-full
-
               bg-white
-
               border
               border-gray-300
-
-              text-black
-
-              rounded-xl
-
+              text-gray-900
+              rounded-lg
               px-4
               py-3
-
               outline-none
-
+              transition
+              focus:border-[#1dbf73]
               focus:ring-2
-              focus:ring-blue-500
+              focus:ring-[#1dbf73]/20
               "
             >
-
 
               <option value="">
                 Select Experience
@@ -483,26 +399,13 @@ const CreateJob = () => {
                 5+ Years
               </option>
 
-
             </select>
-
 
 
           </div>
 
 
-
         </div>
-
-
-
-
-
-
-
-
-
-       
 
 
         <div>
@@ -513,12 +416,11 @@ const CreateJob = () => {
             block
             mb-2
             font-semibold
-            text-white
+            text-gray-900
             "
           >
             Job Description
           </label>
-
 
 
           <textarea
@@ -535,45 +437,27 @@ const CreateJob = () => {
 
             required
 
-
             className="
             w-full
-
             bg-white
-
             border
             border-gray-300
-
-            text-black
-
-            placeholder-gray-500
-
-            rounded-xl
-
+            text-gray-900
+            placeholder-gray-400
+            rounded-lg
             px-4
             py-3
-
             resize-none
-
             outline-none
-
+            transition
+            focus:border-[#1dbf73]
             focus:ring-2
-            focus:ring-blue-500
+            focus:ring-[#1dbf73]/20
             "
           />
 
 
-
         </div>
-
-
-
-
-
-
-
-
-       
 
 
         <button
@@ -582,41 +466,20 @@ const CreateJob = () => {
 
           disabled={loading}
 
-
           className="
           w-full
-
-          bg-gradient-to-r
-
-          from-blue-600
-
-          to-indigo-700
-
-
-          hover:from-indigo-700
-
-          hover:to-blue-600
-
-
-          transition-all
-
-          duration-300
-
-
+          bg-[#1dbf73]
+          hover:bg-[#19a463]
+          transition-colors
+          duration-200
           text-white
-
           py-3
-
-          rounded-xl
-
+          rounded-lg
           font-bold
-
-          shadow-xl
-
-          hover:scale-[1.02]
-
-
+          shadow-sm
+          hover:shadow-md
           disabled:opacity-50
+          disabled:cursor-not-allowed
           "
 
         >
@@ -629,8 +492,6 @@ const CreateJob = () => {
 
 
         </button>
-
-
 
 
       </form>

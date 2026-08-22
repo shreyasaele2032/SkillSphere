@@ -81,12 +81,7 @@ const handleContact = async (freelancerId) => {
   <div
     className="
     min-h-screen
-
-    bg-gradient-to-br
-    from-black
-    via-gray-700
-    to-white
-
+    bg-[#f7f7f7]
     py-10
     px-4
     "
@@ -94,135 +89,114 @@ const handleContact = async (freelancerId) => {
 
     <div className="max-w-7xl mx-auto">
 
-
       <h1
         className="
-        text-5xl
-
-        font-extrabold
-
+        text-4xl
+        md:text-5xl
+        font-bold
         text-center
-
-        text-white
-
-        mb-12
+        text-[#222325]
+        mb-10
         "
       >
         Available Gigs
       </h1>
 
 
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-7">
+
+        {gigs.map((gig) => (
+
+          <div
+            key={gig._id}
+            className="
+            w-full
+            bg-white
+            border
+            border-[#e4e4e4]
+            rounded-xl
+            overflow-hidden
+            shadow-sm
+            transition-all
+            duration-300
+            hover:shadow-xl
+            hover:-translate-y-1
+            "
+          >
+
+            {/* Card Header */}
+
+            <div className="p-6 border-b border-[#eeeeee]">
+
+              <h2
+                className="
+                text-2xl
+                font-semibold
+                text-[#222325]
+                leading-snug
+                "
+              >
+                {gig.title}
+              </h2>
 
 
+              <div className="mt-5 space-y-3 text-sm">
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8 justify-items-center">
-
-  {gigs.map((gig) => (
-
-    <div
-      key={gig._id}
-      className="
-      w-full
-      max-w-md
-      bg-white/20
-      backdrop-blur-xl
-      border
-      border-white/30
-      rounded-3xl
-      shadow-2xl
-      p-6
-      transition-all
-      duration-300
-      hover:bg-white/30
-      hover:-translate-y-2
-      "
-    >
+                <p className="text-[#62646a]">
+                  <span className="font-semibold text-[#222325]">
+                    Freelancer:
+                  </span>{" "}
+                  {gig.freelancer?.name}
+                </p>
 
 
+                <p className="text-[#62646a]">
+                  <span className="font-semibold text-[#222325]">
+                    Category:
+                  </span>{" "}
+                  {gig.category}
+                </p>
 
 
-            <h2
-              className="
-              text-3xl
-
-              font-bold
-
-              text-white
-              "
-            >
-              {gig.title}
-            </h2>
+                <p className="text-[#62646a]">
+                  <span className="font-semibold text-[#222325]">
+                    Price:
+                  </span>{" "}
+                  <span className="font-semibold text-[#222325]">
+                    ₹{gig.price}
+                  </span>
+                </p>
 
 
+                <p className="text-[#62646a]">
+                  <span className="font-semibold text-[#222325]">
+                    Delivery Time:
+                  </span>{" "}
+                  {gig.deliveryTime} Days
+                </p>
 
 
+                <p className="text-[#62646a]">
+                  <span className="font-semibold text-[#222325]">
+                    Location:
+                  </span>{" "}
+                  {gig.location || "Remote"}
+                </p>
 
-            <div className="mt-5 space-y-3 text-gray-100">
-
-
-              <p>
-                <span className="font-bold text-white">
-                  Freelancer:
-                </span>{" "}
-                {gig.freelancer?.name}
-              </p>
-
-
-              <p>
-                <span className="font-bold text-white">
-                  Category:
-                </span>{" "}
-                {gig.category}
-              </p>
-
-
-              <p>
-                <span className="font-bold text-white">
-                  Price:
-                </span>{" "}
-                ₹{gig.price}
-              </p>
-
-
-              <p>
-                <span className="font-bold text-white">
-                  Delivery Time:
-                </span>{" "}
-                {gig.deliveryTime} Days
-              </p>
-
-
-              
-
-
-              <p>
-                <span className="font-bold text-white">
-                  Location:
-                </span>{" "}
-                {gig.location || "Remote"}
-              </p>
-
+              </div>
 
             </div>
 
 
+            {/* Description */}
 
-
-
-
-
-
-            <div className="mt-8">
-
+            <div className="p-6">
 
               <h3
                 className="
-                text-xl
-
-                font-bold
-
-                text-white
-
+                text-base
+                font-semibold
+                text-[#222325]
                 mb-3
                 "
               >
@@ -232,71 +206,49 @@ const handleContact = async (freelancerId) => {
 
               <p
                 className="
-                text-gray-200
-
-                leading-7
+                text-sm
+                text-[#62646a]
+                leading-6
+                line-clamp-4
                 "
               >
                 {gig.description}
               </p>
 
-
             </div>
 
 
+            {/* Skills */}
 
-
-
-
-
-
-
-            <div className="mt-8">
-
+            <div className="px-6 pb-6">
 
               <h3
                 className="
-                text-xl
-
-                font-bold
-
-                text-white
-
-                mb-4
+                text-base
+                font-semibold
+                text-[#222325]
+                mb-3
                 "
               >
                 Skills
               </h3>
 
 
-
-              <div className="flex flex-wrap gap-3">
-
+              <div className="flex flex-wrap gap-2">
 
                 {gig.skills?.map((skill,index)=>(
 
-
                   <span
-
                     key={index}
-
                     className="
-                    bg-white/30
-
-                    backdrop-blur-md
-
+                    bg-[#f2f2f2]
                     border
-
-                    border-white/40
-
-                    text-white
-
-                    px-4
-
-                    py-2
-
+                    border-[#e4e4e4]
+                    text-[#404145]
+                    px-3
+                    py-1.5
                     rounded-full
-
+                    text-xs
                     font-medium
                     "
                   >
@@ -305,68 +257,61 @@ const handleContact = async (freelancerId) => {
 
                   </span>
 
-
                 ))}
 
-
               </div>
-
 
             </div>
 
 
+            {/* Action */}
 
-
-
-
-
-
-            <div className="mt-8 flex gap-4">
-
+            <div
+              className="
+              px-6
+              py-5
+              border-t
+              border-[#eeeeee]
+              bg-white
+              "
+            >
 
               {user?.role === "client" && (
 
                 <button
-  onClick={() =>
-    handleContact(gig.freelancer._id)
-  }
-  className="
-    bg-blue-600
-    hover:bg-blue-700
-    text-white
-    px-6
-    py-3
-    rounded-xl
-    font-semibold
-    shadow-lg
-    transition-all
-    hover:scale-105
-  "
->
-  Contact Freelancer
-</button>
+                  onClick={() =>
+                    handleContact(gig.freelancer._id)
+                  }
+                  className="
+                    w-full
+                    bg-[#1dbf73]
+                    hover:bg-[#19a463]
+                    text-white
+                    px-6
+                    py-3
+                    rounded-lg
+                    font-semibold
+                    text-sm
+                    transition-all
+                    duration-200
+                    hover:shadow-md
+                  "
+                >
+                  Contact Freelancer
+                </button>
 
               )}
-
-
 
             </div>
 
 
-
-
-
           </div>
-
 
         ))}
 
-
       </div>
 
-
     </div>
-
 
   </div>
 );

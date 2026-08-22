@@ -7,7 +7,7 @@ const Gig = require("../models/Gig");
 
 const createGig = async (req, res, next) => {
   try {
-
+    //The frontend sends the gig information, such as:
     const {
       title,
       category,
@@ -17,11 +17,11 @@ const createGig = async (req, res, next) => {
       skills,
       location,
       images,
-    } = req.body;
+    } = req.body; 
 
-
+     
     const gig = await Gig.create({
-      freelancer: req.user._id,
+      freelancer: req.user._id, //Attach this gig to the currently logged-in freelancer.
       title,
       category,
       description,
@@ -30,7 +30,7 @@ const createGig = async (req, res, next) => {
       skills,
       location,
       images,
-    });
+    }); //This creates a new gig in MongoDB.
 
 
     res.status(201).json({
@@ -62,7 +62,8 @@ const getGigs = async (req, res, next) => {
       )
       .sort({
         createdAt: -1,
-      });
+      }); //It only gets gigs whose status is:active 
+      //So inactive/deleted/closed gigs won't be returned
 
 
     res.status(200).json({
@@ -99,7 +100,7 @@ const searchGigs = async (req, res, next) => {
     {
       category: {
         $regex: category,
-        $options: "i",
+        $options: "i", //$options: "i" means case-insensitive.
       },
     },
     {
@@ -287,7 +288,7 @@ const getMyGigs = async (req, res, next) => {
 
     const gigs = await Gig.find({
       freelancer: req.user._id,
-    });
+    }); //Find all gigs where the freelancer field equals my user ID.
 
 
     res.status(200).json({
@@ -300,7 +301,7 @@ const getMyGigs = async (req, res, next) => {
     next(error);
   }
 };
-
+// Get gigs of logged-in freelancer
 
 
 module.exports = {

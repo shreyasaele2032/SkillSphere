@@ -54,7 +54,7 @@ console.log("Sending message:", {
 });
 
 
-    // Join chat room
+   
 
     socket.emit(
       "joinChat",
@@ -146,47 +146,119 @@ console.log("Sending message:", {
 
 
   return (
-  <div className="w-full bg-white pt-4  px-4 pb-4">
+  <div className="w-full bg-[#f7f7f7] pt-4 px-4 pb-4">
 
-    {/* Chat Container */}
-    <div className="w-full h-[calc(100vh-80px)] bg-white rounded-2xl shadow-2xl overflow-hidden border border-white flex flex-col">
+    <div className="
+      w-full
+      h-[calc(100vh-80px)]
+      bg-white
+      rounded-xl
+      shadow-sm
+      overflow-hidden
+      border
+      border-[#e4e4e4]
+      flex
+      flex-col
+    ">
 
-      {/* Header */}
-      <div className="h-18 bg-black flex items-center justify-between px-8 border-b border-white">
+
+      {/* ================= CHAT HEADER ================= */}
+
+      <div className="
+        h-[72px]
+        bg-white
+        flex
+        items-center
+        justify-between
+        px-6
+        lg:px-8
+        border-b
+        border-[#e4e4e4]
+      ">
 
         <div className="flex items-center gap-4">
 
           <div className="relative">
 
-            <div className="w-12 h-12 rounded-full bg-white flex items-center justify-center text-2xl shadow-md">
+            <div className="
+              w-12
+              h-12
+              rounded-full
+              bg-[#f1fdf7]
+              flex
+              items-center
+              justify-center
+              text-2xl
+              border
+              border-[#d9f5e6]
+            ">
               🧑‍💻
             </div>
 
-            <span className="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-green-500 border-2 border-black"></span>
+            <span className="
+              absolute
+              bottom-0
+              right-0
+              w-3.5
+              h-3.5
+              rounded-full
+              bg-[#1dbf73]
+              border-2
+              border-white
+            " />
 
           </div>
 
+
           <div>
-            <h2 className="text-white text-lg font-semibold">
+
+            <h2 className="
+              text-[#222325]
+              text-lg
+              font-extrabold
+            ">
               Freelancer
             </h2>
 
-            <p className="text-gray-400 text-xs">
+            <p className="
+              text-[#1dbf73]
+              text-xs
+              font-bold
+              mt-0.5
+            ">
               Online
             </p>
+
           </div>
 
         </div>
 
-        <div className="text-white text-sm tracking-wide">
+
+        <div className="
+          hidden
+          sm:block
+          text-[#62646a]
+          text-sm
+          font-bold
+          tracking-wide
+        ">
           SkillSphere Chat
         </div>
 
       </div>
 
-      {/* Messages */}
 
-      <div className="flex-1 overflow-y-auto px-8 py-5 space-y-4 bg-gradient-to-b from-gray-100 via-gray-200 to-gray-100">
+      {/* ================= MESSAGES ================= */}
+
+      <div className="
+        flex-1
+        overflow-y-auto
+        px-5
+        sm:px-8
+        py-6
+        space-y-4
+        bg-[#fafafa]
+      ">
 
         {messages.map((msg) => (
 
@@ -200,22 +272,28 @@ console.log("Sending message:", {
           >
 
             <div
-              className={`max-w-[45%] rounded-xl px-4 py-2 transition-all duration-200 hover:shadow-lg ${
+              className={`max-w-[75%] sm:max-w-[55%] px-5 py-3 shadow-sm transition-all duration-200 hover:shadow-md ${
                 msg.sender === "me"
-                  ? "bg-white text-black border border-gray-300 rounded-br-sm shadow-md"
-                  : "bg-gray-800 text-white rounded-bl-sm shadow-md"
+                  ? "bg-[#1dbf73] text-white rounded-2xl rounded-br-sm"
+                  : "bg-white text-[#222325] border border-[#e4e4e4] rounded-2xl rounded-bl-sm"
               }`}
             >
 
-              <p className="text-sm leading-6 break-words">
+              <p className="
+                text-[15px]
+                font-medium
+                leading-6
+                break-words
+              ">
                 {msg.text}
               </p>
 
+
               <p
-                className={`text-[10px] mt-2 text-right ${
+                className={`text-[10px] mt-2 text-right font-medium ${
                   msg.sender === "me"
-                    ? "text-gray-500"
-                    : "text-gray-400"
+                    ? "text-white/80"
+                    : "text-[#95979d]"
                 }`}
               >
                 {msg.time}
@@ -229,11 +307,23 @@ console.log("Sending message:", {
 
       </div>
 
-      {/* Input */}
 
-      <div className="bg-white border-t border-gray-300 px-6 py-4">
+      {/* ================= MESSAGE INPUT ================= */}
 
-        <div className="flex items-center gap-3">
+      <div className="
+        bg-white
+        border-t
+        border-[#e4e4e4]
+        px-5
+        sm:px-6
+        py-4
+      ">
+
+        <div className="
+          flex
+          items-center
+          gap-3
+        ">
 
           <input
             type="text"
@@ -241,12 +331,44 @@ console.log("Sending message:", {
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && sendMessage()}
-            className="flex-1 h-11 px-5 rounded-full border border-gray-300 bg-gray-50 text-gray-800 placeholder:text-gray-400 focus:outline-none focus:ring-2 focus:ring-black transition"
+            className="
+              flex-1
+              h-12
+              px-5
+              rounded-full
+              border
+              border-[#b5b5b5]
+              bg-white
+              text-[#222325]
+              text-[15px]
+              font-medium
+              placeholder:text-[#95979d]
+              focus:outline-none
+              focus:border-[#222325]
+              focus:ring-1
+              focus:ring-[#222325]
+              transition
+            "
           />
+
 
           <button
             onClick={sendMessage}
-            className="w-11 h-11 rounded-full bg-black text-white flex items-center justify-center hover:bg-gray-800 hover:scale-105 active:scale-95 transition-all duration-200"
+            className="
+              w-12
+              h-12
+              rounded-full
+              bg-[#1dbf73]
+              text-white
+              flex
+              items-center
+              justify-center
+              hover:bg-[#19a463]
+              hover:scale-105
+              active:scale-95
+              transition-all
+              duration-200
+            "
           >
             <FaPaperPlane size={16} />
           </button>
@@ -255,11 +377,11 @@ console.log("Sending message:", {
 
       </div>
 
+
     </div>
 
   </div>
 );
-
 };
 
 export default ChatBox;

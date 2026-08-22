@@ -181,75 +181,126 @@ if (loading) {
   );
 }
  return (
-  <div className="min-h-screen px-4 py-10 
-    bg-gradient-to-br from-black via-gray-700 to-white">
+  <div
+    className="
+      min-h-screen
+      bg-[#f7f7f7]
+      px-4
+      py-12
+      md:px-8
+    "
+  >
 
     <div className="max-w-6xl mx-auto">
 
 
-    
+      {/* ================= HEADER ================= */}
+
       <div className="mb-10">
 
-        <h1 className="text-4xl md:text-5xl font-extrabold 
-        text-white drop-shadow-lg">
+        <h1
+          className="
+            text-4xl
+            md:text-5xl
+            font-black
+            text-[#222325]
+            tracking-tight
+          "
+        >
           Project Milestones
         </h1>
 
-        <p className="text-gray-200 mt-3 text-lg">
+        <p
+          className="
+            text-[#62646a]
+            mt-3
+            text-lg
+            font-medium
+          "
+        >
           Track project progress and milestone completion.
         </p>
 
       </div>
 
 
-
-  
+      {/* ================= OVERALL PROGRESS ================= */}
 
       <div
         className="
-        bg-white/20 
-        backdrop-blur-xl
-        border border-white/30
-        rounded-3xl
-        shadow-2xl
-        p-8
-        mb-10
+          bg-white
+          border
+          border-[#e4e4e4]
+          rounded-xl
+          shadow-sm
+          p-7
+          md:p-8
+          mb-10
         "
       >
 
-        <div className="flex justify-between mb-4">
+        <div className="flex items-center justify-between mb-5">
 
-          <span className="text-white font-semibold text-lg">
-            Overall Progress
-          </span>
+          <div>
+
+            <h2
+              className="
+                text-xl
+                md:text-2xl
+                font-extrabold
+                text-[#222325]
+              "
+            >
+              Overall Progress
+            </h2>
+
+            <p
+              className="
+                text-[#74767e]
+                text-sm
+                mt-1
+                font-medium
+              "
+            >
+              Track the completion of your project milestones.
+            </p>
+
+          </div>
 
 
-          <span className="text-white font-bold text-lg">
+          <span
+            className="
+              text-2xl
+              md:text-3xl
+              font-black
+              text-[#1dbf73]
+            "
+          >
             {progress.toFixed(0)}%
           </span>
-
 
         </div>
 
 
-        <div className="
-          w-full 
-          bg-white/30 
-          rounded-full 
-          h-4
-          overflow-hidden
-        ">
+        {/* Progress bar */}
+
+        <div
+          className="
+            w-full
+            bg-[#e4e4e4]
+            rounded-full
+            h-4
+            overflow-hidden
+          "
+        >
 
           <div
             className="
-            h-4
-            rounded-full
-            bg-gradient-to-r
-            from-blue-400
-            via-purple-500
-            to-indigo-600
-            transition-all
-            duration-700
+              h-4
+              rounded-full
+              bg-[#1dbf73]
+              transition-all
+              duration-700
             "
             style={{ width: `${progress}%` }}
           >
@@ -257,132 +308,178 @@ if (loading) {
 
         </div>
 
-
       </div>
 
 
+      {/* ================= MILESTONES ================= */}
 
-
-
-  
-
-      <div className="grid gap-8">
+      <div className="space-y-5">
 
 
         {milestones.map((milestone) => (
 
           <div
             key={milestone._id}
-
             className="
-            bg-white/25
-            backdrop-blur-xl
-            border
-            border-white/30
-            rounded-3xl
-            shadow-2xl
-            p-7
+              bg-white
+              border
+              border-[#e4e4e4]
+              rounded-xl
+              shadow-sm
+              p-6
+              md:p-8
 
-            flex
-            flex-col
-            md:flex-row
-            md:justify-between
-            md:items-center
+              flex
+              flex-col
+              md:flex-row
+              md:items-center
+              md:justify-between
 
-            hover:scale-[1.02]
-            transition-all
-            duration-300
+              gap-7
+
+              transition-all
+              duration-300
+
+              hover:shadow-md
+              hover:border-[#c8c8c8]
             "
           >
 
 
+            {/* ================= MILESTONE DETAILS ================= */}
 
-    
-
-            <div>
+            <div className="flex-1">
 
 
-              <h2
+              <div
                 className="
-                text-2xl
-                font-bold
-                text-white
+                  flex
+                  items-start
+                  gap-4
                 "
               >
-                {milestone.title}
-              </h2>
+
+                {/* Number/Icon */}
+
+                <div
+                  className="
+                    hidden
+                    sm:flex
+                    w-11
+                    h-11
+                    shrink-0
+                    rounded-full
+                    bg-[#f1fdf7]
+                    border
+                    border-[#d9f5e6]
+                    items-center
+                    justify-center
+                    text-[#1dbf73]
+                    font-black
+                  "
+                >
+                  ✓
+                </div>
 
 
+                <div>
 
-              <p className="
-              text-gray-200
-              mt-4
-              "
-              >
-
-                <strong>
-                  Due Date:
-                </strong>{" "}
-
-                {new Date(
-                  milestone.dueDate
-                ).toLocaleDateString()}
-
-              </p>
+                  <h2
+                    className="
+                      text-xl
+                      md:text-2xl
+                      font-black
+                      text-[#222325]
+                    "
+                  >
+                    {milestone.title}
+                  </h2>
 
 
+                  <div
+                    className="
+                      mt-4
+                      flex
+                      flex-wrap
+                      gap-x-8
+                      gap-y-3
+                      text-[#62646a]
+                      text-sm
+                      md:text-base
+                    "
+                  >
+
+                    <p>
+                      <span
+                        className="
+                          font-extrabold
+                          text-[#222325]
+                        "
+                      >
+                        Due Date:
+                      </span>{" "}
+
+                      {new Date(
+                        milestone.dueDate
+                      ).toLocaleDateString()}
+
+                    </p>
 
 
-              <p className="
-              text-gray-200
-              mt-2
-              "
-              >
+                    <p>
 
-                <strong>
-                  Amount:
-                </strong>{" "}
+                      <span
+                        className="
+                          font-extrabold
+                          text-[#222325]
+                        "
+                      >
+                        Amount:
+                      </span>{" "}
 
-                ₹{milestone.amount}
+                      ₹{milestone.amount}
 
-              </p>
+                    </p>
+
+                  </div>
+
+                </div>
+
+              </div>
 
 
             </div>
 
 
+            {/* ================= STATUS + ACTIONS ================= */}
+
+            <div
+              className="
+                flex
+                flex-col
+                items-stretch
+                md:items-end
+                min-w-[190px]
+              "
+            >
 
 
-
-
-       
-
-
-            <div className="
-            mt-6
-            md:mt-0
-            flex
-            flex-col
-            items-center
-            ">
-
-
+              {/* Status */}
 
               <span
-
-              className={`
-              px-5
-              py-2
-              rounded-full
-              text-sm
-              font-bold
-              shadow-lg
-
-              ${getStatusColor(
-                milestone.status
-              )}
-              `}
-
+                className={`
+                  inline-flex
+                  items-center
+                  justify-center
+                  px-5
+                  py-2
+                  rounded-full
+                  text-sm
+                  font-black
+                  ${getStatusColor(
+                    milestone.status
+                  )}
+                `}
               >
 
                 {milestone.status}
@@ -390,46 +487,41 @@ if (loading) {
               </span>
 
 
-
-
-
+              {/* ================= FREELANCER ================= */}
 
               {user?.role === "freelancer" &&
               milestone.status === "Pending" && (
 
                 <button
+                  onClick={() =>
+                    handleSubmitWork(
+                      milestone._id
+                    )
+                  }
 
-                onClick={() =>
-                  handleSubmitWork(
-                    milestone._id
-                  )
-                }
+                  className="
+                    mt-4
+                    w-full
 
-                className="
-                mt-4
-                w-full
+                    bg-[#222325]
+                    hover:bg-[#404145]
 
-                bg-gradient-to-r
-                from-blue-500
-                to-indigo-600
+                    text-white
 
-                hover:from-indigo-600
-                hover:to-blue-700
+                    px-6
+                    py-3
 
-                text-white
+                    rounded-lg
 
-                px-6
-                py-3
+                    font-extrabold
 
-                rounded-xl
+                    shadow-sm
 
-                font-semibold
+                    transition-all
+                    duration-300
 
-                shadow-lg
-
-                transition-all
-                "
-
+                    hover:-translate-y-0.5
+                  "
                 >
 
                   Submit Work
@@ -439,46 +531,41 @@ if (loading) {
               )}
 
 
-
-
-
-
+              {/* ================= CLIENT APPROVAL ================= */}
 
               {user?.role === "client" &&
               milestone.status === "Submitted" && (
 
                 <button
+                  onClick={() =>
+                    handleApprove(
+                      milestone._id
+                    )
+                  }
 
-                onClick={() =>
-                  handleApprove(
-                    milestone._id
-                  )
-                }
+                  className="
+                    mt-4
+                    w-full
 
-                className="
-                mt-4
-                w-full
+                    bg-[#1dbf73]
+                    hover:bg-[#19a463]
 
-                bg-gradient-to-r
-                from-blue-500
-                to-indigo-600
+                    text-white
 
-                hover:scale-105
+                    px-6
+                    py-3
 
-                text-white
+                    rounded-lg
 
-                px-6
-                py-3
+                    font-extrabold
 
-                rounded-xl
+                    shadow-sm
 
-                font-semibold
+                    transition-all
+                    duration-300
 
-                shadow-lg
-
-                transition-all
-                "
-
+                    hover:-translate-y-0.5
+                  "
                 >
 
                   Approve Milestone
@@ -488,48 +575,42 @@ if (loading) {
               )}
 
 
-
-
-
-
+              {/* ================= PAYMENT ================= */}
 
               {user?.role === "client" &&
               milestone.status === "Approved" &&
               !milestone.isPaid && (
 
                 <button
+                  onClick={() =>
+                    handlePayment(
+                      milestone
+                    )
+                  }
 
-                onClick={() =>
-                  handlePayment(
-                    milestone
-                  )
-                }
+                  className="
+                    mt-4
+                    w-full
 
+                    bg-[#1dbf73]
+                    hover:bg-[#19a463]
 
-                className="
-                mt-4
-                w-full
+                    text-white
 
-                bg-gradient-to-r
-                from-green-400
-                to-emerald-600
+                    px-6
+                    py-3
 
-                hover:scale-105
+                    rounded-lg
 
-                text-white
+                    font-extrabold
 
-                px-6
-                py-3
+                    shadow-sm
 
-                rounded-xl
+                    transition-all
+                    duration-300
 
-                font-semibold
-
-                shadow-lg
-
-                transition-all
-                "
-
+                    hover:-translate-y-0.5
+                  "
                 >
 
                   Pay Now
@@ -539,44 +620,44 @@ if (loading) {
               )}
 
 
-
-
-
-
+              {/* ================= PAID ================= */}
 
               {milestone.isPaid && (
 
                 <p
-                className="
-                mt-4
+                  className="
+                    mt-4
 
-                bg-green-500/20
+                    inline-flex
+                    items-center
+                    justify-center
 
-                border
-                border-green-400
+                    bg-[#f1fdf7]
 
-                text-green-300
+                    border
+                    border-[#b7ead0]
 
-                px-5
-                py-2
+                    text-[#168a52]
 
-                rounded-xl
+                    px-5
+                    py-2
 
-                font-bold
+                    rounded-lg
 
-                "
+                    font-black
+
+                    text-sm
+                  "
                 >
 
-                  ✅ Paid
+                  ✓ Paid
 
                 </p>
 
               )}
 
 
-
             </div>
-
 
 
           </div>
@@ -588,7 +669,6 @@ if (loading) {
 
 
     </div>
-
 
   </div>
 );

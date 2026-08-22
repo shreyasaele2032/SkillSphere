@@ -154,59 +154,38 @@ const ClientProfile = () => {
   <div
     className="
     min-h-screen
-
-    bg-gradient-to-br
-    from-black
-    via-gray-700
-    to-white
-
-    py-10
+    bg-white
+    py-12
     px-4
     "
   >
-
 
     <div
       className="
       max-w-5xl
       mx-auto
-
-      bg-white/20
-
-      backdrop-blur-xl
-
+      bg-white
       border
-
-      border-white/30
-
-      rounded-3xl
-
-      shadow-2xl
-
+      border-gray-200
+      rounded-2xl
+      shadow-sm
       p-8
       md:p-10
       "
     >
 
-
       <h1
         className="
         text-4xl
-
         font-extrabold
-
         text-center
-
-        text-white
-
+        text-gray-900
         mb-10
+        tracking-tight
         "
       >
         Edit Client Profile
       </h1>
-
-
-
 
 
       <form
@@ -215,11 +194,7 @@ const ClientProfile = () => {
       >
 
 
-
-
-
         <div className="grid md:grid-cols-2 gap-6">
-
 
 
           <div>
@@ -228,7 +203,7 @@ const ClientProfile = () => {
               className="
               block
               font-semibold
-              text-white
+              text-gray-900
               mb-2
               "
             >
@@ -248,26 +223,18 @@ const ClientProfile = () => {
 
               className="
               w-full
-
               bg-white
-
               border
-
               border-gray-300
-
-              text-black
-
-              rounded-xl
-
+              text-gray-900
+              rounded-lg
               px-4
-
               py-3
-
               outline-none
-
+              transition
+              focus:border-[#1dbf73]
               focus:ring-2
-
-              focus:ring-blue-500
+              focus:ring-[#1dbf73]/20
               "
 
               required
@@ -277,17 +244,13 @@ const ClientProfile = () => {
           </div>
 
 
-
-
-
-
           <div>
 
             <label
               className="
               block
               font-semibold
-              text-white
+              text-gray-900
               mb-2
               "
             >
@@ -307,26 +270,18 @@ const ClientProfile = () => {
 
               className="
               w-full
-
               bg-white
-
               border
-
               border-gray-300
-
-              text-black
-
-              rounded-xl
-
+              text-gray-900
+              rounded-lg
               px-4
-
               py-3
-
               outline-none
-
+              transition
+              focus:border-[#1dbf73]
               focus:ring-2
-
-              focus:ring-blue-500
+              focus:ring-[#1dbf73]/20
               "
 
             />
@@ -334,18 +289,10 @@ const ClientProfile = () => {
           </div>
 
 
-
         </div>
 
 
-
-
-
-
-
-
         <div className="grid md:grid-cols-2 gap-6">
-
 
 
           <div>
@@ -354,7 +301,7 @@ const ClientProfile = () => {
               className="
               block
               font-semibold
-              text-white
+              text-gray-900
               mb-2
               "
             >
@@ -374,26 +321,18 @@ const ClientProfile = () => {
 
               className="
               w-full
-
               bg-white
-
               border
-
               border-gray-300
-
-              text-black
-
-              rounded-xl
-
+              text-gray-900
+              rounded-lg
               px-4
-
               py-3
-
               outline-none
-
+              transition
+              focus:border-[#1dbf73]
               focus:ring-2
-
-              focus:ring-blue-500
+              focus:ring-[#1dbf73]/20
               "
 
               required
@@ -403,18 +342,13 @@ const ClientProfile = () => {
           </div>
 
 
-
-
-
-
-
           <div>
 
             <label
               className="
               block
               font-semibold
-              text-white
+              text-gray-900
               mb-2
               "
             >
@@ -434,26 +368,18 @@ const ClientProfile = () => {
 
               className="
               w-full
-
               bg-white
-
               border
-
               border-gray-300
-
-              text-black
-
-              rounded-xl
-
+              text-gray-900
+              rounded-lg
               px-4
-
               py-3
-
               outline-none
-
+              transition
+              focus:border-[#1dbf73]
               focus:ring-2
-
-              focus:ring-blue-500
+              focus:ring-[#1dbf73]/20
               "
 
             />
@@ -461,25 +387,16 @@ const ClientProfile = () => {
           </div>
 
 
-
         </div>
 
 
-
-
-
-
-
-
-
         <div>
-
 
           <label
             className="
             block
             font-semibold
-            text-white
+            text-gray-900
             mb-2
             "
           >
@@ -501,48 +418,32 @@ const ClientProfile = () => {
 
             className="
             w-full
-
             bg-white
-
             border
-
             border-gray-300
-
-            text-black
-
-            rounded-xl
-
+            text-gray-900
+            rounded-lg
             px-4
-
             py-3
-
             outline-none
-
+            transition
+            focus:border-[#1dbf73]
             focus:ring-2
-
-            focus:ring-blue-500
+            focus:ring-[#1dbf73]/20
             "
 
           />
 
-
         </div>
 
 
-
-
-
-
-
-
         <div>
-
 
           <label
             className="
             block
             font-semibold
-            text-white
+            text-gray-900
             mb-2
             "
           >
@@ -564,42 +465,25 @@ const ClientProfile = () => {
 
             className="
             w-full
-
             bg-white
-
             border
-
             border-gray-300
-
-            text-black
-
-            placeholder-gray-500
-
-            rounded-xl
-
+            text-gray-900
+            placeholder-gray-400
+            rounded-lg
             px-4
-
             py-3
-
             outline-none
-
             resize-none
-
+            transition
+            focus:border-[#1dbf73]
             focus:ring-2
-
-            focus:ring-blue-500
+            focus:ring-[#1dbf73]/20
             "
 
           />
 
-
         </div>
-
-
-
-
-
-
 
 
         <button
@@ -608,36 +492,17 @@ const ClientProfile = () => {
 
           className="
           w-full
-
-          bg-gradient-to-r
-
-          from-blue-600
-
-          to-indigo-700
-
-
-          hover:from-indigo-700
-
-          hover:to-blue-600
-
-
+          bg-[#1dbf73]
+          hover:bg-[#19a463]
           text-white
-
           py-4
-
-          rounded-xl
-
+          rounded-lg
           font-bold
-
           text-lg
-
-          transition-all
-
-          duration-300
-
-          shadow-xl
-
-          hover:scale-[1.02]
+          transition-colors
+          duration-200
+          shadow-sm
+          hover:shadow-md
           "
 
         >
@@ -647,15 +512,10 @@ const ClientProfile = () => {
         </button>
 
 
-
-
-
       </form>
 
 
-
     </div>
-
 
 
   </div>

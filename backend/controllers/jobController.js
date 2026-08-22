@@ -194,7 +194,7 @@ console.log("Applicants:", job.applicants);
   } catch (error) {
     next(error);
   }
-};
+}; //this is to apply for particular jobs
 
 const getJobApplications = async (req,res,next)=>{
 

@@ -4,7 +4,9 @@ const User = require("../models/User");
 const generateToken = require("../utils/generateToken");
 
 
-
+//"next" is an Express middleware function used to pass control to the next middleware. 
+//When we call next(error), it passes the error to the global error-handling middleware,
+//allowing us to handle errors centrally instead of repeating error-handling code in every controller.
 
 const registerUser = async (req, res, next) => {
      console.log("REGISTER API HIT");
@@ -20,9 +22,9 @@ const registerUser = async (req, res, next) => {
     
     const existingUser = await User.findOne({
       email,
-    });
+    }); //used to handle the existing user
 
-
+     //if user already exists it is a bad request
     if (existingUser) {
       return res.status(400).json({
         success: false,
@@ -37,7 +39,7 @@ const registerUser = async (req, res, next) => {
       email,
       password,
       role,
-    });
+    });  //Creates a new user in MongoDB.
 
 
     
@@ -85,7 +87,7 @@ const loginUser = async (req, res, next) => {
    
     const user = await User.findOne({
       email,
-    }).select("+password");
+    }).select("+password"); //Include the password field this time.
 
 
 
@@ -129,7 +131,13 @@ const loginUser = async (req, res, next) => {
     const token = generateToken(
       user._id,
       user.role
-    );
+    );// Email correct?
+    //        ↓
+    //    Password correct?
+    //        ↓
+    //     Generate JWT
+    //         ↓
+    //     Send token to frontend
 
 
 
@@ -151,7 +159,7 @@ const loginUser = async (req, res, next) => {
 
       token,
 
-    });
+    }); //this block sends the JWT token and the user information to the frontend
 
 
 

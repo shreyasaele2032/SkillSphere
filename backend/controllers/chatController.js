@@ -1,5 +1,7 @@
 
-
+//"next" is an Express middleware function used to pass control to the next middleware.
+//When we call next(error), it passes the error to the global error-handling middleware,
+//allowing us to handle errors centrally instead of repeating error-handling code in every controller."
 const Chat = require("../models/Chat");
 const Message = require("../models/Message");
 const Gig = require("../models/Gig");
@@ -12,9 +14,7 @@ const createChat = async (req, res, next) => {
 
     const {
       userId,
-    } = req.body;
-
-
+    } = req.body; //The frontend sends the ID of the person the logged-in user wants to chat with.
   
 
     let chat = await Chat.findOne({
@@ -25,6 +25,11 @@ const createChat = async (req, res, next) => {
         ],
       },
     });
+//This checks:
+// "Does a chat already exist between these two users?"
+// req.user._id is the id of currently logged-in user.
+// userId is the other user.
+// $all means both IDs must be present in the participants array.
 
 
     if (!chat) {
@@ -48,7 +53,8 @@ const createChat = async (req, res, next) => {
   } catch(error) {
     next(error);
   }
-};
+}; //Creates a chat between the logged-in user and another user.
+//If a chat already exists between them, it returns the existing chat instead of creating a duplicate.
 
 
 
@@ -60,7 +66,7 @@ const getChats = async (
   req,
   res,
   next
-) => {
+) => { //This gets all chats belonging to the logged-in user
 
   try {
 
@@ -91,7 +97,7 @@ const getChats = async (
 
 
 
-
+//This is mainly useful when the logged-in user wants to see their clients they have chatted with.
 const getMyClients = async (req, res, next) => {
   try {
 
@@ -179,7 +185,7 @@ const sendMessage = async (
   req,
   res,
   next
-) => {
+) => { //This function is used to send a new message.
 
   try {
 
@@ -222,7 +228,7 @@ const sendMessage = async (
         attachment:
           attachment || "",
 
-      });
+      }); //This creates a new message in MongoDB.
 
 
 
@@ -360,7 +366,7 @@ const getMyFreelancers = async (req, res, next) => {
   } catch (error) {
     next(error);
   }
-};
+}; //This is similar to getMyClients(), but it is used to get freelancers the logged-in user has chatted with.
 
 
 

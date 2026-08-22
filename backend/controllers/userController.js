@@ -3,9 +3,6 @@
 const User = require("../models/User");
 
 
-// @desc    Get logged-in user profile
-// @route   GET /api/users/profile
-// @access  Private
 
 const getProfile = async (req, res, next) => {
   try {

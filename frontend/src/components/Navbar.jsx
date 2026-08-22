@@ -32,266 +32,351 @@ const Navbar = () => {
 };
 
   return (
-    <nav className="sticky top-0 z-50 bg-white border-b border-gray-300 shadow-lg">
+  <nav className="sticky top-0 z-50 bg-white border-b border-[#e5e5e5]">
 
-      <div className="max-w-7xl mx-auto px-8">
+    <div className="max-w-7xl mx-auto px-5 lg:px-8">
 
-        <div className="flex items-center justify-between h-20">
+      <div className="flex items-center justify-between h-[76px]">
 
-         
 
-          <Link
+        <Link
+          to="/"
+          className="
+            text-[32px]
+            font-black
+            tracking-[-1.5px]
+            text-[#404145]
+            hover:text-[#1dbf73]
+            transition
+            duration-200
+          "
+        >
+          Skill<span className="text-[#1dbf73]">Sphere</span>
+        </Link>
+
+
+        <div className="
+          hidden
+          md:flex
+          items-center
+          gap-7
+          text-[#222325]
+        ">
+
+          <NavLink
             to="/"
-            className="text-3xl font-extrabold tracking-wide text-black hover:text-gray-700 transition"
+            className={navLinkStyle}
           >
-            SkillSphere
-          </Link>
+            Home
+          </NavLink>
 
-         
-
-          <div className="hidden md:flex items-center gap-8 text-black">
-
-            <NavLink to="/" className={navLinkStyle}>
-              Home
-            </NavLink>
-            <NavLink to="/about" className={navLinkStyle}>
-  About
-</NavLink>
-
-          
-
-            {isLoggedIn && user?.role === "freelancer" && (
-              <>
-                <NavLink
-                  to="/create-gig"
-                  className={navLinkStyle}
-                >
-                  Create Gig
-                </NavLink>
-              </>
-            )}
-
-         
-
-            {isLoggedIn && user?.role === "client" && (
-              <>
-                <NavLink
-                  to="/create-job"
-                  className={navLinkStyle}
-                >
-                  Create Job
-                </NavLink>
-              </>
-            )}
-
-            {!isLoggedIn ? (
-              <>
-                <NavLink
-                  to="/login"
-                  className={navLinkStyle}
-                >
-                  Login
-                </NavLink>
-
-                <Link
-                  to="/register"
-                  className="bg-black text-white px-6 py-2.5 hover:bg-gray-800 transition duration-300 shadow-md"
-                >
-                  Register
-                </Link>
-              </>
-            ) : (
-              <>
-                {user?.role === "admin" ? (
-
-  <NavLink
-    to="/admin-dashboard"
-    className={navLinkStyle}
-  >
-    Admin Dashboard
-  </NavLink>
-
-) : (
-
-  <NavLink
-    to="/dashboard"
-    className={navLinkStyle}
-  >
-    Dashboard
-  </NavLink>
-
-)}
-                           
-
-               {user?.role !== "admin" && (
-  <NavLink
-    to={user?.role === "client" ? "/client-profile" : "/profile"}
-    className="text-gray-600 hover:text-black text-3xl transition duration-300"
-  >
-    <FaUserCircle />
-  </NavLink>
-)}
-
-                {/* Logout */}
-
-                <button
-                  onClick={handleLogout}
-                  className="bg-black hover:bg-gray-800 text-white px-5 py-2.5 transition duration-300 shadow-md"
-                >
-                  Logout
-                </button>
-
-              </>
-            )}
-
-          </div>
-
-        
-
-          <button
-            onClick={() => setMenuOpen(!menuOpen)}
-            className="md:hidden text-3xl text-black"
+          <NavLink
+            to="/about"
+            className={navLinkStyle}
           >
-            {menuOpen ? <FaTimes /> : <FaBars />}
-          </button>
+            About
+          </NavLink>
 
-        </div>
 
-     
-        {menuOpen && (
+          {isLoggedIn && user?.role === "freelancer" && (
+            <>
+              <NavLink
+                to="/create-gig"
+                className={navLinkStyle}
+              >
+                Create Gig
+              </NavLink>
+            </>
+          )}
 
-          <div className="md:hidden bg-white border-t text-black border-gray-300 py-6 flex flex-col gap-5">
 
-            <NavLink
-              to="/"
-              className={navLinkStyle}
-              onClick={() => setMenuOpen(false)}
-            >
-              Home
-            </NavLink>
+          {isLoggedIn && user?.role === "client" && (
+            <>
+              <NavLink
+                to="/create-job"
+                className={navLinkStyle}
+              >
+                Create Job
+              </NavLink>
+            </>
+          )}
 
-            <NavLink
-  to="/about"
-  className={navLinkStyle}
-  onClick={() => setMenuOpen(false)}
->
-  About
-</NavLink>
 
-          
+          {!isLoggedIn ? (
+            <>
+              <NavLink
+                to="/login"
+                className={navLinkStyle}
+              >
+                Login
+              </NavLink>
 
-            {isLoggedIn && user?.role === "freelancer" && (
-              <>
+              <Link
+                to="/register"
+                className="
+                  bg-[#1dbf73]
+                  text-white
+                  px-6
+                  py-2.5
+                  rounded-md
+                  font-bold
+                  text-[15px]
+                  hover:bg-[#19a463]
+                  transition
+                  duration-200
+                "
+              >
+                Register
+              </Link>
+            </>
+          ) : (
+            <>
+              {user?.role === "admin" ? (
+
                 <NavLink
-                  to="/jobs"
+                  to="/admin-dashboard"
                   className={navLinkStyle}
-                  onClick={() => setMenuOpen(false)}
                 >
-                  Jobs
+                  Admin Dashboard
                 </NavLink>
 
-                <NavLink
-                  to="/create-gig"
-                  className={navLinkStyle}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Create Gig
-                </NavLink>
-              </>
-            )}
-
-      
-
-            {isLoggedIn && user?.role === "client" && (
-              <>
-                <NavLink
-                  to="/gigs"
-                  className={navLinkStyle}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Gigs
-                </NavLink>
-
-                <NavLink
-                  to="/create-job"
-                  className={navLinkStyle}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Create Job
-                </NavLink>
-              </>
-            )}
-                        {!isLoggedIn ? (
-
-              <>
-
-                <NavLink
-                  to="/login"
-                  className={navLinkStyle}
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Login
-                </NavLink>
-
-                <NavLink
-                  to="/register"
-                  className="bg-black text-white py-3 text-center font-medium hover:bg-gray-800 transition duration-300"
-                  onClick={() => setMenuOpen(false)}
-                >
-                  Register
-                </NavLink>
-
-              </>
-
-            ) : (
-
-              <>
+              ) : (
 
                 <NavLink
                   to="/dashboard"
                   className={navLinkStyle}
-                  onClick={() => setMenuOpen(false)}
                 >
                   Dashboard
                 </NavLink>
 
+              )}
+
+
+              {user?.role !== "admin" && (
                 <NavLink
-                  to="/chat"
-                  className={navLinkStyle}
-                  onClick={() => setMenuOpen(false)}
+                  to={user?.role === "client" ? "/client-profile" : "/profile"}
+                  className="
+                    text-[#62646a]
+                    hover:text-[#1dbf73]
+                    text-[26px]
+                    transition
+                    duration-200
+                  "
                 >
-                  Chat
+                  <FaUserCircle />
                 </NavLink>
+              )}
 
-                {user?.role !== "admin" && (
-  <NavLink
-    to={user?.role === "client" ? "/client-profile" : "/profile"}
-    className={navLinkStyle}
-    onClick={() => setMenuOpen(false)}
-  >
-    Profile
-  </NavLink>
-)}
 
-                <button
-                  onClick={handleLogout}
-                  className="bg-black hover:bg-gray-800 text-white py-3 transition duration-300 shadow-md"
-                >
-                  Logout
-                </button>
+              <button
+                onClick={handleLogout}
+                className="
+                  bg-[#222325]
+                  hover:bg-black
+                  text-white
+                  px-5
+                  py-2.5
+                  rounded-md
+                  font-bold
+                  text-[15px]
+                  transition
+                  duration-200
+                "
+              >
+                Logout
+              </button>
 
-              </>
+            </>
+          )}
 
-            )}
+        </div>
 
-          </div>
 
-        )}
+        <button
+          onClick={() => setMenuOpen(!menuOpen)}
+          className="
+            md:hidden
+            text-3xl
+            text-[#222325]
+            hover:text-[#1dbf73]
+            transition
+          "
+        >
+          {menuOpen ? <FaTimes /> : <FaBars />}
+        </button>
 
       </div>
 
-    </nav>
-  );
+
+      {menuOpen && (
+
+        <div className="
+          md:hidden
+          bg-white
+          border-t
+          text-[#222325]
+          border-[#e5e5e5]
+          py-6
+          px-2
+          flex
+          flex-col
+          gap-5
+        ">
+
+          <NavLink
+            to="/"
+            className={navLinkStyle}
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </NavLink>
+
+
+          <NavLink
+            to="/about"
+            className={navLinkStyle}
+            onClick={() => setMenuOpen(false)}
+          >
+            About
+          </NavLink>
+
+
+          {isLoggedIn && user?.role === "freelancer" && (
+            <>
+              <NavLink
+                to="/jobs"
+                className={navLinkStyle}
+                onClick={() => setMenuOpen(false)}
+              >
+                Jobs
+              </NavLink>
+
+              <NavLink
+                to="/create-gig"
+                className={navLinkStyle}
+                onClick={() => setMenuOpen(false)}
+              >
+                Create Gig
+              </NavLink>
+            </>
+          )}
+
+
+          {isLoggedIn && user?.role === "client" && (
+            <>
+              <NavLink
+                to="/gigs"
+                className={navLinkStyle}
+                onClick={() => setMenuOpen(false)}
+              >
+                Gigs
+              </NavLink>
+
+              <NavLink
+                to="/create-job"
+                className={navLinkStyle}
+                onClick={() => setMenuOpen(false)}
+              >
+                Create Job
+              </NavLink>
+            </>
+          )}
+
+
+          {!isLoggedIn ? (
+
+            <>
+
+              <NavLink
+                to="/login"
+                className={navLinkStyle}
+                onClick={() => setMenuOpen(false)}
+              >
+                Login
+              </NavLink>
+
+              <NavLink
+                to="/register"
+                className="
+                  bg-[#1dbf73]
+                  text-white
+                  py-3
+                  text-center
+                  rounded-md
+                  font-bold
+                  text-base
+                  hover:bg-[#19a463]
+                  transition
+                  duration-200
+                "
+                onClick={() => setMenuOpen(false)}
+              >
+                Register
+              </NavLink>
+
+            </>
+
+          ) : (
+
+            <>
+
+              <NavLink
+                to="/dashboard"
+                className={navLinkStyle}
+                onClick={() => setMenuOpen(false)}
+              >
+                Dashboard
+              </NavLink>
+
+              <NavLink
+                to="/chat"
+                className={navLinkStyle}
+                onClick={() => setMenuOpen(false)}
+              >
+                Chat
+              </NavLink>
+
+
+              {user?.role !== "admin" && (
+                <NavLink
+                  to={user?.role === "client" ? "/client-profile" : "/profile"}
+                  className={navLinkStyle}
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Profile
+                </NavLink>
+              )}
+
+
+              <button
+                onClick={handleLogout}
+                className="
+                  bg-[#222325]
+                  hover:bg-black
+                  text-white
+                  py-3
+                  rounded-md
+                  font-bold
+                  text-base
+                  transition
+                  duration-200
+                "
+              >
+                Logout
+              </button>
+
+            </>
+
+          )}
+
+        </div>
+
+      )}
+
+    </div>
+
+  </nav>
+);
 };
 
 export default Navbar;

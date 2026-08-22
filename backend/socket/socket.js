@@ -12,11 +12,6 @@ const initializeSocket = (io) => {
             "Socket connected:",
             socket.id
         );
-
-
-
-      
-
         socket.on(
             "joinChat",
             (chatId) => {
@@ -33,9 +28,6 @@ const initializeSocket = (io) => {
             }
         );
 
-
-
-      
         socket.on(
             "sendMessage",
             async(data)=>{
@@ -51,10 +43,6 @@ const initializeSocket = (io) => {
                         messageType,
                         attachment
                     } = data;
-
-
-
-                 
 
                     const newMessage = await Message.create({
 
@@ -72,10 +60,6 @@ const initializeSocket = (io) => {
 
                     });
 
-
-
-                
-
                     await Chat.findByIdAndUpdate(
                         chatId,
                         {
@@ -89,10 +73,6 @@ const initializeSocket = (io) => {
                         }
                     );
 
-
-
-                 
-
                     const populatedMessage = await Message
   .findById(newMessage._id)
   .populate("sender", "name email");
@@ -102,9 +82,6 @@ io.to(chatId).emit(
     "receiveMessage",
     populatedMessage
 );
-
-
-
                 }
                 catch(error){
 
@@ -116,33 +93,18 @@ io.to(chatId).emit(
 
 
                 }
-
-
             }
         );
-
-
-
-      
-
         socket.on(
             "disconnect",
             ()=>{
-
-
                 console.log(
                     "Socket disconnected:",
                     socket.id
                 );
-
-
             }
         );
-
-
     });
-
-
 };
 
 

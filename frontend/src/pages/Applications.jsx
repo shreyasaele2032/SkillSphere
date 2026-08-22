@@ -162,18 +162,13 @@ const handleAccept = async (application) => {
   <div
     className="
     min-h-screen
-    py-10
+    py-12
     px-4
-    bg-gradient-to-br
-    from-black
-    via-gray-700
-    to-white
+    bg-white
     "
   >
 
-
     <div className="max-w-6xl mx-auto">
-
 
 
       {/* Heading */}
@@ -183,10 +178,10 @@ const handleAccept = async (application) => {
         text-4xl
         md:text-5xl
         font-extrabold
-        text-white
+        text-gray-900
         text-center
         mb-12
-        drop-shadow-lg
+        tracking-tight
         "
       >
 
@@ -195,32 +190,26 @@ const handleAccept = async (application) => {
       </h1>
 
 
-
-
-
       {
         applicants.length === 0 ? (
 
-
           <div
             className="
-            bg-white/20
-            backdrop-blur-xl
+            bg-white
             border
-            border-white/30
-            rounded-3xl
-            shadow-2xl
+            border-gray-200
+            rounded-2xl
+            shadow-sm
             p-10
             text-center
             "
           >
 
-
             <h2
               className="
               text-2xl
               font-bold
-              text-white
+              text-gray-900
               "
             >
 
@@ -229,10 +218,9 @@ const handleAccept = async (application) => {
             </h2>
 
 
-
             <p
               className="
-              text-gray-200
+              text-gray-500
               mt-3
               "
             >
@@ -242,58 +230,45 @@ const handleAccept = async (application) => {
             </p>
 
 
-
           </div>
 
-
         ) : (
-
-
 
           <div
             className="
             grid
             md:grid-cols-2
             lg:grid-cols-3
-            gap-8
+            gap-7
             "
           >
 
-
-
-
             {
               applicants.map((application)=>(
-
-
 
                 <div
 
                   key={application._id}
 
                   className="
-                  bg-white/25
-                  backdrop-blur-xl
+                  bg-white
                   border
-                  border-white/30
-                  rounded-3xl
-                  shadow-2xl
+                  border-gray-200
+                  rounded-2xl
+                  shadow-sm
                   p-7
-                  hover:scale-[1.03]
-                  transition-all
-                  duration-300
+                  hover:shadow-lg
+                  transition-shadow
+                  duration-200
                   "
                 >
-
-
-
 
 
                   <h2
                     className="
                     text-2xl
                     font-bold
-                    text-white
+                    text-gray-900
                     "
                   >
 
@@ -302,18 +277,14 @@ const handleAccept = async (application) => {
                   </h2>
 
 
-
-
-
-
                   <p
                     className="
                     mt-4
-                    text-gray-200
+                    text-gray-600
                     "
                   >
 
-                    <span className="font-semibold text-white">
+                    <span className="font-semibold text-gray-900">
                       Email:
                     </span>{" "}
 
@@ -322,19 +293,14 @@ const handleAccept = async (application) => {
                   </p>
 
 
-
-
-
-
-
                   <p
                     className="
                     mt-2
-                    text-gray-200
+                    text-gray-600
                     "
                   >
 
-                    <span className="font-semibold text-white">
+                    <span className="font-semibold text-gray-900">
                       Phone:
                     </span>{" "}
 
@@ -343,19 +309,14 @@ const handleAccept = async (application) => {
                   </p>
 
 
-
-
-
-
-
                   <p
                     className="
                     mt-2
-                    text-gray-200
+                    text-gray-600
                     "
                   >
 
-                    <span className="font-semibold text-white">
+                    <span className="font-semibold text-gray-900">
                       Portfolio:
                     </span>{" "}
 
@@ -364,18 +325,12 @@ const handleAccept = async (application) => {
                   </p>
 
 
-
-
-
-
-
                   <div className="mt-5">
-
 
                     <h3
                       className="
                       font-semibold
-                      text-white
+                      text-gray-900
                       "
                     >
 
@@ -384,10 +339,9 @@ const handleAccept = async (application) => {
                     </h3>
 
 
-
                     <p
                       className="
-                      text-gray-200
+                      text-gray-600
                       mt-2
                       leading-relaxed
                       "
@@ -397,23 +351,13 @@ const handleAccept = async (application) => {
 
                     </p>
 
-
                   </div>
-
-
-
-
-
-
-
 
 
                   {
                     application.status === "accepted" ? (
 
-
                       <div className="mt-7 space-y-3">
-
 
 
                         <button
@@ -422,16 +366,16 @@ const handleAccept = async (application) => {
 
                           className="
                           w-full
-                          bg-gradient-to-r
-                          from-blue-500
-                          to-indigo-600
-                          hover:scale-105
+                          bg-[#1dbf73]
+                          hover:bg-[#19a463]
                           text-white
                           py-3
-                          rounded-xl
+                          rounded-lg
                           font-semibold
-                          shadow-lg
+                          shadow-sm
+                          hover:shadow-md
                           transition-all
+                          duration-200
                           "
 
                         >
@@ -439,10 +383,6 @@ const handleAccept = async (application) => {
                           Chat with Freelancer
 
                         </button>
-
-
-
-
 
 
                         <button
@@ -458,16 +398,16 @@ const handleAccept = async (application) => {
 
                           className="
                           w-full
-                          bg-gradient-to-r
-                          from-green-400
-                          to-emerald-600
-                          hover:scale-105
+                          bg-gray-900
+                          hover:bg-black
                           text-white
                           py-3
-                          rounded-xl
+                          rounded-lg
                           font-semibold
-                          shadow-lg
+                          shadow-sm
+                          hover:shadow-md
                           transition-all
+                          duration-200
                           "
 
                         >
@@ -477,14 +417,9 @@ const handleAccept = async (application) => {
                         </button>
 
 
-
                       </div>
 
-
-
                     ) : (
-
-
 
                       <button
 
@@ -493,16 +428,16 @@ const handleAccept = async (application) => {
                         className="
                         mt-7
                         w-full
-                        bg-gradient-to-r
-                        from-green-400
-                        to-green-700
-                        hover:scale-105
+                        bg-[#1dbf73]
+                        hover:bg-[#19a463]
                         text-white
                         py-3
-                        rounded-xl
+                        rounded-lg
                         font-semibold
-                        shadow-lg
+                        shadow-sm
+                        hover:shadow-md
                         transition-all
+                        duration-200
                         "
 
                       >
@@ -511,41 +446,25 @@ const handleAccept = async (application) => {
 
                       </button>
 
-
-
                     )
 
                   }
 
 
-
-
-
                 </div>
-
-
 
               ))
 
             }
 
-
-
-
-
           </div>
-
-
 
         )
 
       }
 
 
-
-
     </div>
-
 
   </div>
 

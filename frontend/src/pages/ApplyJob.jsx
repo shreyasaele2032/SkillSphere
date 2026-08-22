@@ -51,397 +51,338 @@ const ApplyJob = () => {
   return (
   <div
     className="
-    min-h-screen
-    py-10
-    px-4
-    flex
-    items-center
-    justify-center
-    bg-gradient-to-br
-    from-black
-    via-gray-700
-    to-white
+      min-h-screen
+      bg-[#f7f7f7]
+      py-12
+      px-4
+      sm:px-6
     "
   >
 
-
     <div
       className="
-      w-full
-      max-w-2xl
-
-      bg-white/20
-      backdrop-blur-xl
-
-      border
-      border-white/30
-
-      shadow-2xl
-
-      rounded-3xl
-
-      p-8
-      md:p-10
+        w-full
+        max-w-3xl
+        mx-auto
+        bg-white
+        border
+        border-[#e4e4e4]
+        rounded-xl
+        shadow-sm
+        overflow-hidden
       "
     >
 
+      {/* HEADER */}
 
-
-      <h1
+      <div
         className="
-        text-4xl
-        font-extrabold
-        text-white
-        text-center
-        mb-10
-        drop-shadow-lg
+          px-7
+          sm:px-10
+          py-8
+          border-b
+          border-[#e4e4e4]
+          bg-white
         "
       >
-        Apply for Job
-      </h1>
 
-
-
-
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-6"
-      >
-
-
-
-        <div>
-
-          <label
-            className="
-            block
-            text-white
-            font-semibold
-            mb-2
-            "
-          >
-            Full Name
-          </label>
-
-
-          <input
-            type="text"
-            name="name"
-            value={formData.name}
-            readOnly
-
-            className="
-            w-full
-
-            bg-white/30
-
-            backdrop-blur-md
-
-            border
-            border-white/40
-
-            text-white
-
-            placeholder-gray-300
-
-            rounded-xl
-
-            px-4
-            py-3
-
-            outline-none
-
-            focus:ring-2
-            focus:ring-blue-400
-            "
-          />
-
-        </div>
-
-
-
-
-
-        <div>
-
-          <label
-            className="
-            block
-            text-white
-            font-semibold
-            mb-2
-            "
-          >
-            Email
-          </label>
-
-
-          <input
-            type="email"
-            name="email"
-            value={formData.email}
-            readOnly
-
-            className="
-            w-full
-
-            bg-white/30
-
-            backdrop-blur-md
-
-            border
-            border-white/40
-
-            text-white
-
-            rounded-xl
-
-            px-4
-            py-3
-
-            outline-none
-
-            focus:ring-2
-            focus:ring-blue-400
-            "
-          />
-
-        </div>
-
-
-
-
-
-
-
-        <div>
-
-          <label
-            className="
-            block
-            text-white
-            font-semibold
-            mb-2
-            "
-          >
-            Phone Number
-          </label>
-
-
-          <input
-            type="text"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            required
-
-            className="
-            w-full
-
-            bg-white/30
-
-            backdrop-blur-md
-
-            border
-            border-white/40
-
-            text-white
-
-            rounded-xl
-
-            px-4
-            py-3
-
-            outline-none
-
-            focus:ring-2
-            focus:ring-blue-400
-            "
-          />
-
-        </div>
-
-
-
-
-
-
-
-        <div>
-
-          <label
-            className="
-            block
-            text-white
-            font-semibold
-            mb-2
-            "
-          >
-            Portfolio Link
-          </label>
-
-
-          <input
-            type="url"
-            name="portfolio"
-            value={formData.portfolio}
-            onChange={handleChange}
-            placeholder="https://yourportfolio.com"
-
-            className="
-            w-full
-
-            bg-white/30
-
-            backdrop-blur-md
-
-            border
-            border-white/40
-
-            text-white
-
-            placeholder-gray-300
-
-            rounded-xl
-
-            px-4
-            py-3
-
-            outline-none
-
-            focus:ring-2
-            focus:ring-blue-400
-            "
-          />
-
-        </div>
-
-
-
-
-
-
-
-
-        <div>
-
-          <label
-            className="
-            block
-            text-white
-            font-semibold
-            mb-2
-            "
-          >
-            Cover Letter
-          </label>
-
-
-          <textarea
-            name="coverLetter"
-            rows="6"
-
-            value={formData.coverLetter}
-
-            onChange={handleChange}
-
-            placeholder="Tell the client why you're the right freelancer..."
-
-            required
-
-            className="
-            w-full
-
-            bg-white/30
-
-            backdrop-blur-md
-
-            border
-            border-white/40
-
-            text-white
-
-            placeholder-gray-300
-
-            rounded-xl
-
-            px-4
-            py-3
-
-            outline-none
-
-            resize-none
-
-            focus:ring-2
-            focus:ring-blue-400
-            "
-          />
-
-        </div>
-
-
-
-
-
-
-
-
-        <button
-
-          type="submit"
-
-          disabled={loading}
-
+        <h1
           className="
-          w-full
-
-          bg-gradient-to-r
-
-          from-green-400
-
-          to-emerald-600
-
-          hover:from-emerald-600
-
-          hover:to-green-500
-
-
-          text-white
-
-          py-3
-
-          rounded-xl
-
-          font-bold
-
-          shadow-xl
-
-          transition-all
-
-          duration-300
-
-          hover:scale-[1.02]
-
-          disabled:opacity-50
+            text-4xl
+            sm:text-5xl
+            font-extrabold
+            tracking-tight
+            text-[#222325]
+            mb-3
           "
+        >
+          Apply for Job
+        </h1>
 
+        <p
+          className="
+            text-lg
+            font-medium
+            text-[#62646a]
+          "
+        >
+          Tell the client why you're the right freelancer for this project.
+        </p>
+
+      </div>
+
+
+      {/* FORM */}
+
+      <div className="p-7 sm:p-10">
+
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-7"
         >
 
-          {loading
-            ? "Submitting..."
-            : "Submit Application"
-          }
 
-        </button>
+          {/* FULL NAME */}
+
+          <div>
+
+            <label
+              className="
+                block
+                text-[17px]
+                font-extrabold
+                text-[#222325]
+                mb-2
+              "
+            >
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              name="name"
+              value={formData.name}
+              readOnly
+              className="
+                w-full
+                h-[52px]
+                bg-[#f5f5f5]
+                border
+                border-[#d5d5d5]
+                text-[#62646a]
+                text-[16px]
+                font-semibold
+                rounded-md
+                px-4
+                outline-none
+                cursor-not-allowed
+              "
+            />
+
+          </div>
 
 
+          {/* EMAIL */}
+
+          <div>
+
+            <label
+              className="
+                block
+                text-[17px]
+                font-extrabold
+                text-[#222325]
+                mb-2
+              "
+            >
+              Email
+            </label>
+
+            <input
+              type="email"
+              name="email"
+              value={formData.email}
+              readOnly
+              className="
+                w-full
+                h-[52px]
+                bg-[#f5f5f5]
+                border
+                border-[#d5d5d5]
+                text-[#62646a]
+                text-[16px]
+                font-semibold
+                rounded-md
+                px-4
+                outline-none
+                cursor-not-allowed
+              "
+            />
+
+          </div>
 
 
-      </form>
+          {/* PHONE NUMBER */}
 
+          <div>
+
+            <label
+              className="
+                block
+                text-[17px]
+                font-extrabold
+                text-[#222325]
+                mb-2
+              "
+            >
+              Phone Number
+            </label>
+
+            <input
+              type="text"
+              name="phone"
+              value={formData.phone}
+              onChange={handleChange}
+              required
+              className="
+                w-full
+                h-[52px]
+                bg-white
+                border
+                border-[#b5b5b5]
+                text-[#222325]
+                text-[16px]
+                font-medium
+                rounded-md
+                px-4
+                outline-none
+                focus:border-[#222325]
+                focus:ring-1
+                focus:ring-[#222325]
+                transition
+              "
+            />
+
+          </div>
+
+
+          {/* PORTFOLIO */}
+
+          <div>
+
+            <label
+              className="
+                block
+                text-[17px]
+                font-extrabold
+                text-[#222325]
+                mb-2
+              "
+            >
+              Portfolio Link
+            </label>
+
+            <input
+              type="url"
+              name="portfolio"
+              value={formData.portfolio}
+              onChange={handleChange}
+              placeholder="https://yourportfolio.com"
+              className="
+                w-full
+                h-[52px]
+                bg-white
+                border
+                border-[#b5b5b5]
+                text-[#222325]
+                text-[16px]
+                font-medium
+                placeholder:text-[#95979d]
+                rounded-md
+                px-4
+                outline-none
+                focus:border-[#222325]
+                focus:ring-1
+                focus:ring-[#222325]
+                transition
+              "
+            />
+
+          </div>
+
+
+          {/* COVER LETTER */}
+
+          <div>
+
+            <label
+              className="
+                block
+                text-[17px]
+                font-extrabold
+                text-[#222325]
+                mb-2
+              "
+            >
+              Cover Letter
+            </label>
+
+            <textarea
+              name="coverLetter"
+              rows="6"
+              value={formData.coverLetter}
+              onChange={handleChange}
+              placeholder="Tell the client why you're the right freelancer..."
+              required
+              className="
+                w-full
+                bg-white
+                border
+                border-[#b5b5b5]
+                text-[#222325]
+                text-[16px]
+                font-medium
+                placeholder:text-[#95979d]
+                rounded-md
+                px-4
+                py-4
+                outline-none
+                resize-none
+                leading-7
+                focus:border-[#222325]
+                focus:ring-1
+                focus:ring-[#222325]
+                transition
+              "
+            />
+
+          </div>
+
+
+          {/* SUBMIT */}
+
+          <div
+            className="
+              pt-5
+              border-t
+              border-[#e4e4e4]
+            "
+          >
+
+            <button
+              type="submit"
+              disabled={loading}
+              className="
+                w-full
+                h-[56px]
+                bg-[#1dbf73]
+                hover:bg-[#19a463]
+                text-white
+                text-lg
+                font-extrabold
+                rounded-md
+                transition
+                duration-200
+                disabled:opacity-50
+                disabled:cursor-not-allowed
+              "
+            >
+
+              {loading
+                ? "Submitting..."
+                : "Submit Application"
+              }
+
+            </button>
+
+          </div>
+
+
+        </form>
+
+      </div>
 
     </div>
-
 
   </div>
 );

@@ -24,68 +24,92 @@ const MyClients = () => {
 
   };
 
-  return (
+ return (
   <div
     className="
-    min-h-screen
-    py-12
-    px-6
-
-    bg-gradient-to-br
-    from-black
-    via-gray-700
-    to-white
+      min-h-screen
+      bg-[#f7f7f7]
+      py-12
+      px-5
+      md:px-8
     "
   >
-
 
     <div className="max-w-6xl mx-auto">
 
 
-      <h1
-        className="
-        text-4xl
-        md:text-5xl
-        font-extrabold
-        text-white
-        mb-16
-        tracking-tight
-        drop-shadow-lg
-        "
-      >
-        Clients Who Contacted You
-      </h1>
+      {/* ================= HEADER ================= */}
+
+      <div className="mb-10">
+
+        <h1
+          className="
+            text-4xl
+            md:text-5xl
+            font-black
+            text-[#222325]
+            tracking-tight
+          "
+        >
+          Clients Who Contacted You
+        </h1>
+
+        <p
+          className="
+            mt-3
+            text-[#62646a]
+            text-lg
+            font-medium
+          "
+        >
+          Connect with clients and continue your freelance conversations.
+        </p>
+
+      </div>
 
 
-
+      {/* ================= EMPTY STATE ================= */}
 
       {clients.length === 0 ? (
 
-
         <div
           className="
-          bg-white/20
-          backdrop-blur-xl
-
-          border
-          border-white/30
-
-          rounded-3xl
-
-          shadow-2xl
-
-          p-12
-
-          text-center
+            bg-white
+            border
+            border-[#e4e4e4]
+            rounded-xl
+            shadow-sm
+            p-12
+            md:p-16
+            text-center
           "
         >
+
+          <div
+            className="
+              w-20
+              h-20
+              mx-auto
+              rounded-full
+              bg-[#f1fdf7]
+              border
+              border-[#d9f5e6]
+              flex
+              items-center
+              justify-center
+              text-3xl
+              mb-6
+            "
+          >
+            💬
+          </div>
 
 
           <h2
             className="
-            text-3xl
-            font-bold
-            text-white
+              text-3xl
+              font-black
+              text-[#222325]
             "
           >
             No clients yet.
@@ -94,138 +118,127 @@ const MyClients = () => {
 
           <p
             className="
-            mt-3
-            text-gray-200
-            text-lg
+              mt-3
+              text-[#62646a]
+              text-lg
+              font-medium
             "
           >
             Clients who want to collaborate will appear here.
           </p>
 
-
         </div>
-
 
       ) : (
 
+        /* ================= CLIENT LIST ================= */
 
-        <div className="space-y-8">
+        <div className="space-y-4">
 
 
           {clients.map((item) => (
-
 
             <div
               key={item.chatId}
 
               className="
-              group
+                group
+                bg-white
+                border
+                border-[#e4e4e4]
+                rounded-xl
+                shadow-sm
+                p-6
+                md:p-7
 
-              bg-white/25
+                flex
+                flex-col
+                sm:flex-row
 
-              backdrop-blur-xl
+                justify-between
+                items-start
+                sm:items-center
 
-              border
-              border-white/30
+                gap-6
 
-              rounded-3xl
+                hover:shadow-md
+                hover:border-[#c8c8c8]
 
-              shadow-2xl
-
-              p-8
-
-              flex
-
-              flex-col
-
-              md:flex-row
-
-              justify-between
-
-              items-start
-
-              md:items-center
-
-              gap-6
-
-              hover:bg-white/30
-
-              hover:-translate-y-2
-
-              transition-all
-
-              duration-500
+                transition-all
+                duration-300
               "
             >
 
 
+              {/* ================= CLIENT INFORMATION ================= */}
+
+              <div
+                className="
+                  flex
+                  items-center
+                  gap-5
+                "
+              >
 
 
-              <div className="flex items-center gap-6">
-
+                {/* CLIENT INITIAL */}
 
                 <div
                   className="
-                  w-16
-                  h-16
+                    w-16
+                    h-16
+                    shrink-0
 
-                  rounded-full
+                    rounded-full
 
-                  bg-white/20
+                    bg-[#1dbf73]
 
-                  backdrop-blur-xl
+                    text-white
 
-                  border
-                  border-white/30
+                    flex
+                    items-center
+                    justify-center
 
-                  text-white
+                    text-2xl
+                    font-black
 
-                  flex
-
-                  items-center
-
-                  justify-center
-
-                  text-2xl
-
-                  font-black
+                    shadow-sm
                   "
                 >
-                  
+
                   {item.client.name.charAt(0)}
 
                 </div>
 
 
-
-
+                {/* CLIENT DETAILS */}
 
                 <div>
 
-
                   <h2
                     className="
-                    text-3xl
-                    font-black
-                    text-white
+                      text-2xl
+                      font-black
+                      text-[#222325]
+
+                      group-hover:text-[#1dbf73]
+
+                      transition
                     "
                   >
                     {item.client.name}
                   </h2>
 
 
-
                   <p
                     className="
-                    mt-1
-                    text-gray-200
-                    font-medium
+                      mt-1
+                      text-[#62646a]
+                      font-semibold
                     "
                   >
                     {item.client.role}
                   </p>
-
-
 
                 </div>
 
@@ -233,66 +246,54 @@ const MyClients = () => {
               </div>
 
 
-
-
-
+              {/* ================= OPEN CHAT ================= */}
 
               <Link
-
                 to={`/chat/${item.chatId}`}
 
                 className="
-                bg-gradient-to-r
+                  w-full
+                  sm:w-auto
 
-                from-blue-500
+                  bg-[#222325]
+                  hover:bg-[#1dbf73]
 
-                to-indigo-600
+                  text-white
 
-                text-white
+                  px-8
+                  py-3
 
-                px-8
+                  rounded-lg
 
-                py-3
+                  font-extrabold
 
-                rounded-full
+                  text-center
 
-                font-bold
+                  shadow-sm
 
-                shadow-xl
+                  transition-all
+                  duration-300
 
-                hover:scale-105
-
-                transition-all
-
-                duration-300
+                  hover:-translate-y-0.5
                 "
-
               >
 
-                Open Chat
+                Open Chat →
 
               </Link>
 
 
-
-
-
             </div>
-
 
           ))}
 
 
-
         </div>
-
 
       )}
 
 
-
     </div>
-
 
   </div>
 );

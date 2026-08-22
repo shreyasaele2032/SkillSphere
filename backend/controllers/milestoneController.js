@@ -175,7 +175,8 @@ const submitMilestone = async (
       await Milestone.findById(
         req.params.id
       );
-
+//req.params.id does NOT mean all milestones.
+//It means one specific milestone identified by the ID in the URL.
 
     if (!milestone) {
       return res.status(404).json({

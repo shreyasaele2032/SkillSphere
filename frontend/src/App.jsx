@@ -1,18 +1,18 @@
-// src/App.jsx
+
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { useEffect } from "react";
 
-// Context Providers
+
 import { AuthProvider } from "./context/AuthContext";
 import { SocketProvider } from "./context/SocketContext";
 import { NotificationProvider } from "./context/NotificationContext";
 
-// Common Components
+
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 
-// Pages
+
 import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Register from "./pages/Register";

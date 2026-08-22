@@ -86,353 +86,495 @@ const Register = () => {
 
   };
 
-
-  return (
-  <div className="min-h-screen flex items-center justify-center px-4 py-12 
-                  bg-gradient-to-br from-black via-gray-900 to-gray-700">
+return (
+  <div className="
+    min-h-screen
+    bg-[#fafafa]
+    flex
+    items-center
+    justify-center
+    px-5
+    py-12
+  ">
 
     <div className="
-      w-full 
-      max-w-lg 
-      rounded-2xl 
-      p-8 
-      bg-white/10 
-      backdrop-blur-xl 
-      border 
-      border-white/20 
-      shadow-2xl
+      w-full
+      max-w-6xl
+      bg-white
+      border
+      border-[#e5e5e5]
+      shadow-[0_4px_24px_rgba(0,0,0,0.08)]
+      flex
+      flex-col
+      lg:flex-row
+      overflow-hidden
     ">
 
 
-      <h1 className="
-        text-4xl 
-        font-extrabold 
-        text-center 
-        bg-gradient-to-r 
-        from-blue-400 
-        to-cyan-300 
-        bg-clip-text 
-        text-transparent
+      {/* ================= REGISTER FORM ================= */}
+
+      <div className="
+        w-full
+        lg:w-[58%]
+        p-8
+        sm:p-10
+        lg:p-12
       ">
-        Create Your Account
-      </h1>
 
+        {/* HEADER */}
 
-      <p className="
-        text-center 
-        text-gray-300 
-        mt-3 
-        mb-8
-      ">
-        Join SkillSphere as a Freelancer or Client
-      </p>
+        <div className="mb-8">
 
-
-
-
-      <form
-        onSubmit={handleSubmit}
-        className="space-y-6"
-      >
-
-
-
-        <div>
-
-          <label className="
-            block 
-            mb-2 
-            text-gray-200 
-            font-semibold
+          <h1 className="
+            text-4xl
+            sm:text-5xl
+            font-extrabold
+            tracking-tight
+            text-[#222325]
+            mb-3
           ">
-            Full Name
-          </label>
+            Create Your Account
+          </h1>
 
-
-          <input
-            type="text"
-            name="name"
-            placeholder="Enter your full name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-            className="
-              w-full
-              px-4
-              py-3
-              rounded-xl
-              bg-white/10
-              border
-              border-white/20
-              text-white
-              placeholder-gray-400
-              outline-none
-              focus:ring-2
-              focus:ring-blue-500
-              transition
-            "
-          />
+          <p className="
+            text-lg
+            font-medium
+            text-[#62646a]
+          ">
+            Join SkillSphere as a Freelancer or Client
+          </p>
 
         </div>
 
 
+        {/* FORM */}
+
+        <form
+          onSubmit={handleSubmit}
+          className="space-y-6"
+        >
 
 
+          {/* FULL NAME */}
 
-        <div>
+          <div>
 
-          <label className="
-            block 
-            mb-2 
-            text-gray-200 
-            font-semibold
-          ">
-            Email
-          </label>
+            <label className="
+              block
+              mb-2
+              text-lg
+              font-extrabold
+              text-[#222325]
+            ">
+              Full Name
+            </label>
+
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter your full name"
+              value={formData.name}
+              onChange={handleChange}
+              required
+              className="
+                w-full
+                h-[52px]
+                px-4
+                bg-white
+                border
+                border-[#b5b5b5]
+                rounded-md
+                text-[#222325]
+                text-[16px]
+                font-medium
+                placeholder:text-[#95979d]
+                focus:outline-none
+                focus:border-[#222325]
+                focus:ring-1
+                focus:ring-[#222325]
+                transition
+              "
+            />
+
+          </div>
 
 
-          <input
-            type="email"
-            name="email"
-            placeholder="Enter your email"
-            value={formData.email}
-            onChange={handleChange}
-            required
+          {/* EMAIL */}
+
+          <div>
+
+            <label className="
+              block
+              mb-2
+              text-lg
+              font-extrabold
+              text-[#222325]
+            ">
+              Email
+            </label>
+
+            <input
+              type="email"
+              name="email"
+              placeholder="Enter your email"
+              value={formData.email}
+              onChange={handleChange}
+              required
+              className="
+                w-full
+                h-[52px]
+                px-4
+                bg-white
+                border
+                border-[#b5b5b5]
+                rounded-md
+                text-[#222325]
+                text-[16px]
+                font-medium
+                placeholder:text-[#95979d]
+                focus:outline-none
+                focus:border-[#222325]
+                focus:ring-1
+                focus:ring-[#222325]
+                transition
+              "
+            />
+
+          </div>
+
+
+          {/* PASSWORD */}
+
+          <div>
+
+            <label className="
+              block
+              mb-2
+              text-lg
+              font-extrabold
+              text-[#222325]
+            ">
+              Password
+            </label>
+
+            <input
+              type="password"
+              name="password"
+              placeholder="Create a password"
+              value={formData.password}
+              onChange={handleChange}
+              required
+              className="
+                w-full
+                h-[52px]
+                px-4
+                bg-white
+                border
+                border-[#b5b5b5]
+                rounded-md
+                text-[#222325]
+                text-[16px]
+                font-medium
+                placeholder:text-[#95979d]
+                focus:outline-none
+                focus:border-[#222325]
+                focus:ring-1
+                focus:ring-[#222325]
+                transition
+              "
+            />
+
+          </div>
+
+
+          {/* CONFIRM PASSWORD */}
+
+          <div>
+
+            <label className="
+              block
+              mb-2
+              text-lg
+              font-extrabold
+              text-[#222325]
+            ">
+              Confirm Password
+            </label>
+
+            <input
+              type="password"
+              name="confirmPassword"
+              placeholder="Confirm your password"
+              value={formData.confirmPassword}
+              onChange={handleChange}
+              required
+              className="
+                w-full
+                h-[52px]
+                px-4
+                bg-white
+                border
+                border-[#b5b5b5]
+                rounded-md
+                text-[#222325]
+                text-[16px]
+                font-medium
+                placeholder:text-[#95979d]
+                focus:outline-none
+                focus:border-[#222325]
+                focus:ring-1
+                focus:ring-[#222325]
+                transition
+              "
+            />
+
+          </div>
+
+
+          {/* REGISTER AS */}
+
+          <div>
+
+            <label className="
+              block
+              mb-2
+              text-lg
+              font-extrabold
+              text-[#222325]
+            ">
+              Register As
+            </label>
+
+            <select
+              name="role"
+              value={formData.role}
+              onChange={handleChange}
+              className="
+                w-full
+                h-[52px]
+                px-4
+                bg-white
+                border
+                border-[#b5b5b5]
+                rounded-md
+                text-[#222325]
+                text-[16px]
+                font-semibold
+                focus:outline-none
+                focus:border-[#222325]
+                focus:ring-1
+                focus:ring-[#222325]
+                transition
+              "
+            >
+
+              <option
+                value="freelancer"
+                className="text-black"
+              >
+                Freelancer
+              </option>
+
+              <option
+                value="client"
+                className="text-black"
+              >
+                Client
+              </option>
+
+            </select>
+
+          </div>
+
+
+          {/* REGISTER BUTTON */}
+
+          <button
+            type="submit"
+            disabled={loading}
             className="
               w-full
-              px-4
-              py-3
-              rounded-xl
-              bg-white/10
-              border
-              border-white/20
+              h-[54px]
+              rounded-md
+              font-extrabold
+              text-lg
               text-white
-              placeholder-gray-400
-              outline-none
-              focus:ring-2
-              focus:ring-blue-500
+              bg-[#1dbf73]
+              hover:bg-[#19a463]
               transition
-            "
-          />
-
-        </div>
-
-
-
-
-
-
-        <div>
-
-          <label className="
-            block 
-            mb-2 
-            text-gray-200 
-            font-semibold
-          ">
-            Password
-          </label>
-
-
-          <input
-            type="password"
-            name="password"
-            placeholder="Create a password"
-            value={formData.password}
-            onChange={handleChange}
-            required
-            className="
-              w-full
-              px-4
-              py-3
-              rounded-xl
-              bg-white/10
-              border
-              border-white/20
-              text-white
-              placeholder-gray-400
-              outline-none
-              focus:ring-2
-              focus:ring-blue-500
-              transition
-            "
-          />
-
-        </div>
-
-
-
-
-
-
-
-        <div>
-
-          <label className="
-            block 
-            mb-2 
-            text-gray-200 
-            font-semibold
-          ">
-            Confirm Password
-          </label>
-
-
-          <input
-            type="password"
-            name="confirmPassword"
-            placeholder="Confirm your password"
-            value={formData.confirmPassword}
-            onChange={handleChange}
-            required
-            className="
-              w-full
-              px-4
-              py-3
-              rounded-xl
-              bg-white/10
-              border
-              border-white/20
-              text-white
-              placeholder-gray-400
-              outline-none
-              focus:ring-2
-              focus:ring-blue-500
-              transition
-            "
-          />
-
-        </div>
-
-
-
-
-
-
-
-        <div>
-
-          <label className="
-            block 
-            mb-2 
-            text-gray-200 
-            font-semibold
-          ">
-            Register As
-          </label>
-
-
-
-          <select
-            name="role"
-            value={formData.role}
-            onChange={handleChange}
-            className="
-              w-full
-              px-4
-              py-3
-              rounded-xl
-              bg-white/10
-              border
-              border-white/20
-              text-white
-              outline-none
-              focus:ring-2
-              focus:ring-blue-500
+              duration-200
+              disabled:opacity-50
+              disabled:cursor-not-allowed
             "
           >
-
-            <option 
-              value="freelancer"
-              className="text-black"
-            >
-              Freelancer
-            </option>
+            {loading ? "Registering..." : "Register"}
+          </button>
 
 
-            <option 
-              value="client"
-              className="text-black"
-            >
-              Client
-            </option>
+        </form>
 
 
-          </select>
+        {/* LOGIN */}
 
+        <p className="
+          text-center
+          mt-8
+          text-[#62646a]
+          text-base
+          font-medium
+        ">
+
+          Already have an account?{" "}
+
+          <Link
+            to="/login"
+            className="
+              text-[#222325]
+              font-extrabold
+              underline
+              hover:text-[#1dbf73]
+              transition
+            "
+          >
+            Login
+          </Link>
+
+        </p>
+
+      </div>
+
+
+      {/* ================= RIGHT PROMOTIONAL PANEL ================= */}
+
+      <div className="
+        hidden
+        lg:flex
+        lg:w-[42%]
+        bg-[#1dbf73]
+        text-white
+        relative
+        overflow-hidden
+        flex-col
+        justify-center
+        p-12
+      ">
+
+        <div className="
+          relative
+          z-10
+        ">
+
+          <h2 className="
+            text-4xl
+            xl:text-5xl
+            font-extrabold
+            leading-tight
+            tracking-tight
+            mb-8
+          ">
+            Find your next opportunity
+          </h2>
+
+
+          <div className="
+            space-y-7
+            text-lg
+            font-semibold
+          ">
+
+            <div className="flex gap-4">
+
+              <span className="
+                text-2xl
+                font-extrabold
+              ">
+                ✓
+              </span>
+
+              <p>
+                Connect with talented freelancers
+              </p>
+
+            </div>
+
+
+            <div className="flex gap-4">
+
+              <span className="
+                text-2xl
+                font-extrabold
+              ">
+                ✓
+              </span>
+
+              <p>
+                Showcase your skills and experience
+              </p>
+
+            </div>
+
+
+            <div className="flex gap-4">
+
+              <span className="
+                text-2xl
+                font-extrabold
+              ">
+                ✓
+              </span>
+
+              <p>
+                Find projects that match your skills
+              </p>
+
+            </div>
+
+
+            <div className="flex gap-4">
+
+              <span className="
+                text-2xl
+                font-extrabold
+              ">
+                ✓
+              </span>
+
+              <p>
+                Build your professional network
+              </p>
+
+            </div>
+
+          </div>
 
         </div>
 
 
+        {/* DECORATIVE CIRCLES */}
 
+        <div className="
+          absolute
+          w-80
+          h-80
+          rounded-full
+          border-[45px]
+          border-white/10
+          -bottom-32
+          -right-32
+        " />
 
+        <div className="
+          absolute
+          w-56
+          h-56
+          rounded-full
+          border-[35px]
+          border-white/10
+          top-[-80px]
+          right-[-70px]
+        " />
 
-
-
-
-        <button
-          type="submit"
-          disabled={loading}
-          className="
-            w-full
-            py-3
-            rounded-xl
-            font-bold
-            text-white
-            bg-gradient-to-r
-            from-blue-600
-            to-cyan-500
-            hover:scale-[1.02]
-            shadow-lg
-            shadow-blue-500/30
-            transition
-            disabled:opacity-50
-          "
-        >
-
-          {loading ? "Registering..." : "Register"}
-
-        </button>
-
-
-
-      </form>
-
-
-
-
-
-
-
-      <p className="
-        text-center 
-        mt-8 
-        text-gray-300
-      ">
-
-        Already have an account?{" "}
-
-
-        <Link
-          to="/login"
-          className="
-            text-cyan-400
-            font-semibold
-            hover:text-blue-400
-            transition
-          "
-        >
-
-          Login
-
-        </Link>
-
-
-      </p>
-
-
-
-
+      </div>
 
     </div>
 
