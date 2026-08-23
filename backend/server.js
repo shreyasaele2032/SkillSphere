@@ -25,9 +25,9 @@ app.use(
       }
 
       if (
-        origin.startsWith("http://localhost:") ||
-        origin === "https://skill-sphere-pied-eight.vercel.app"
-      ) {
+  origin.startsWith("http://localhost:") ||
+  origin === "https://skillsphereproject.vercel.app"
+) {
         return callback(null, true);
       }
 
@@ -182,7 +182,10 @@ const io = new Server(server, {
         return callback(null, true);
       }
 
-      if (origin.startsWith("http://localhost:")) {
+      if (
+  origin.startsWith("http://localhost:") ||
+  origin === "https://skillsphereproject.vercel.app"
+) {
         return callback(null, true);
       }
 
