@@ -56,7 +56,7 @@ const ClientDashboardProfile = () => {
             <img
               src={
                 profile.profileImage
-                  ? `https://skillsphere-2-h641.onrender.com${profile.profileImage}`
+                  ? `https://skillsphere-nkn4.onrender.com/api${profile.profileImage}`
                   : "https://cdn-icons-png.flaticon.com/512/149/149071.png"
               }
               alt="Client"

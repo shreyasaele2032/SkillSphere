@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import profileService from "../services/profileService";
 
-const BACKEND_URL = "https://skillsphere-2-h641.onrender.com";
+const BACKEND_URL = "https://skillsphere-nkn4.onrender.com/api";
 
 const Profile = () => {
   const [profile, setProfile] = useState(null);
