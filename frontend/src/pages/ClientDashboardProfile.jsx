@@ -10,13 +10,17 @@ const ClientDashboardProfile = () => {
   }, []);
 
   const fetchProfile = async () => {
-    try {
-      const data = await profileService.getMyProfile();
-      setProfile(data.profile);
-    } catch (error) {
-      console.log(error);
-    }
-  };
+  try {
+    const data = await profileService.getMyProfile();
+
+    console.log("PROFILE RESPONSE:", data);
+
+    setProfile(data.profile);
+
+  } catch (error) {
+    console.log("PROFILE ERROR:", error.response?.data || error);
+  }
+};
 
 
   if (!profile) {
